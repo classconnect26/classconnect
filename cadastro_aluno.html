@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="stylecadastro_aluno.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="form_box">
+            <div class="backimg">
+
+                <img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+                <h2 id="cadastro">CADASTRO</h2>
+
+            </div>
+            <form action="" method="post">
+                <div class="inputs">
+                    <img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+                    <input type="text" name="Usuário" placeholder="nome de usuário" required>
+                    <input type="email" name="E-mail" placeholder="seu@email.com" required>
+                    <input type="password" name="Senha" placeholder="senha" required>
+                    <input type="password" name="CSenha" placeholder="confirmar senha" required>
+                    <div class="btnladoalado">
+                        
+                        <input id="turma" type="number" min="0" max="99999" name="turma" placeholder="turma" required>
+                        <input id="escola" type="text" name="escola" placeholder="escola" required>
+
+                    </div>   
+                    <button type="submit" name="Avançar">Avançar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

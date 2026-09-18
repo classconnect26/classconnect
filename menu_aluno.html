@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassConnect</title>
+    <link rel="stylesheet" href="stylemenu_aluno.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1 id = "ola"></h1>
+
+        <div id = "sidebar">
+
+            <h3 id = "classconnect">ClassConnect</h3>
+            <h3>Minha turma</h3>
+            <h3>Matérias</h3>
+            <h3 id = "tarefas">Tarefas</h3>
+            <h3>Minha conta</h3>
+            <h3>Ajuda</h3>
+            <button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
+
+        </div>
+        
+        <!-- popups, deixar sempre no final do html!!!-->
+
+        <div id="confirm_saida">    
+            
+            <div id="saida_cont">
+
+                <h3>Deseja realmente sair?</h3>
+                <div id="botoes_saida">
+                    <button class = "confirmacao" onclick="sair()">Sim</button>
+                    <button class = "confirmacao" onclick="fecharPopup()">Não</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scriptmenu_aluno.js"></script>
+</body>
+</html>

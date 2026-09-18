@@ -10,6 +10,13 @@ body{
     background-color: #5C4B8A;
 }
 
+a{
+    text-decoration: none;
+    color: #734F96;
+    font-size: 2vh;
+    margin-top: 2.5vh;
+}
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -19,7 +26,7 @@ body{
     justify-content: center;
 }
 
-input{
+input, select{
     padding: 5px;
     margin: 5px;
     width: 100%;

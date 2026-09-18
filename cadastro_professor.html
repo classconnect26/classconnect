@@ -19,13 +19,15 @@
             <form action="" method="post">
                 <div class="inputs">
                     <img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
-                    <input type="text" name="Usuário" placeholder="nome de usuário" required>
-                    <input type="email" name="E-mail" placeholder="seu@email.com" required>
-                    <input type="password" name="Senha" placeholder="senha" required>
-                    <input type="password" name="CSenha" placeholder="confirmar senha" required>
+                    <input type="text" id="usuario" name="Usuário" placeholder="nome de usuário" required>
+                    <input type="text" id="email" name="E-mail" placeholder="seu@email.com" required>
+                    <input type="password" id="senha" name="Senha" placeholder="senha" required>
+                    <input type="password" id="csenha" name="CSenha" placeholder="confirmar senha" required>
                     <div class="btnladoalado">
                         
-                        <input id="escola" type="text" name="escola" placeholder="escola" required>
+                        <select id="escola" name="escola" placeholder="escola" required>
+                            <option value="">Selecione uma escola</option>
+                        </select>
 
                     </div>   
                     <button type="submit" name="Avançar">Avançar</button>
@@ -33,5 +35,7 @@
             </form>
         </div>
     </div>
+
+    <script src="scriptcadastro_professor.js"></script>
 </body>
 </html>

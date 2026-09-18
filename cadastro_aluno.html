@@ -16,17 +16,19 @@
                 <h2 id="cadastro">CADASTRO</h2>
 
             </div>
-            <form action="" method="post">
+            <form>
                 <div class="inputs">
                     <img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
-                    <input type="text" name="Usuário" placeholder="nome de usuário" required>
-                    <input type="email" name="E-mail" placeholder="seu@email.com" required>
-                    <input type="password" name="Senha" placeholder="senha" required>
-                    <input type="password" name="CSenha" placeholder="confirmar senha" required>
+                    <input type="text" id="nome" name="nome" placeholder="nome de usuário" required>
+                    <input type="text" id="email" name="email" placeholder="seu@email.com" required>
+                    <input type="password" id="senha" name="senha" placeholder="senha" required>
+                    <input type="password" id="csenha" name="csenha" placeholder="confirmar senha" required>
                     <div class="btnladoalado">
                         
-                        <input id="turma" type="number" min="0" max="99999" name="turma" placeholder="turma" required>
-                        <input id="escola" type="text" name="escola" placeholder="escola" required>
+                        <input id="turma" type="text" name="turma" placeholder="turma" required disabled>
+                        <select id="escola" name="escola" placeholder="escola" required>
+                            <option value="">Selecione uma escola</option>
+                        </select>
 
                     </div>   
                     <button type="submit" name="Avançar">Avançar</button>
@@ -34,5 +36,7 @@
             </form>
         </div>
     </div>
+
+    <script src="scriptcadastro_aluno.js"></script>
 </body>
 </html>

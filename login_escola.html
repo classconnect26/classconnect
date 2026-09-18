@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="stylecadastro_escola.css">
 </head>
 <body>
@@ -13,22 +13,21 @@
             <div class="backimg">
 
                 <img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
-                <h2 id="cadastro">CADASTRO</h2>
+                <h2 id="cadastro">LOGIN</h2>
 
             </div>
             <form>
                 <div class="inputs">
                     <img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
-                    <input id="escola" type="text" name="Escola" placeholder="nome da escola" required>
-                    <input id="cnpj" type="text" name="cnpj" placeholder="CNPJ" required>
+                    <input id="escola" type="text" name="Escola" placeholder="nome da escola ou CNPJ" required>
                     <input id="senha" type="password" name="Senha" placeholder="senha" required>
-                    <input id="csenha" type="password" name="CSenha" placeholder="confirmar senha" required>
                     <button type="submit" name="Avançar">Avançar</button>
+                    <a href="cadastro_escola.html">Não possui uma conta? Cadastre-se</a>
                 </div>
             </form>
         </div>
     </div>
 
-    <script src="scriptcadastro_escola.js"></script>
+    <script src="scriptlogin_escola.js"></script>
 </body>
 </html>

@@ -19,7 +19,15 @@ body{
     justify-content: center;
 }
 
-input{
+a{
+    text-decoration: none;
+    color: #734F96;
+    font-size: 2vh;
+    margin-top: 2.5vh;
+}
+
+
+input, select{
     padding: 5px;
     margin: 5px;
     width: 100%;

@@ -36,10 +36,11 @@ body{
     border-radius: 0 0 30px 30px;
     height: 25%;
     justify-content: center;
+    align-items: center;
 }
 
 h1{
-    margin-top: 2vh;
+    font-size: 5vw;
     color: white;
 }
 

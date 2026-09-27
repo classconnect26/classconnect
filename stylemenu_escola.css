@@ -63,6 +63,7 @@ h3, #btnsair, a{
     margin-bottom: 0.5vh;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #sidebar {
@@ -176,4 +177,46 @@ a{
     width:8vw;
     bottom: -2vh;
     left: -3vw;
+}
+
+#ajudapopup{
+    display: none;
+    position: absolute;
+    line-break: auto;
+    width: 30vw;
+    background-color: #b29ad8;
+    padding: 2vw;
+    top: 15%;
+    left: 22%;
+}
+
+#oquesomostexto{
+    text-align: justify;
+    color: black;
+    font-size: 1.2vw;
+}
+
+#oquesomos{
+    margin-bottom: 2vh;
+    cursor: auto;
+}
+
+#minha_contapopup{
+    display: none;
+    position: absolute;
+    line-break: auto;
+    width: 15vw;
+    background-color: #b29ad8;
+    padding: 2vw;
+    top: 20%;
+    left: 22%;
+}
+
+#usuario{
+    color: white;
+    margin-bottom: 1vh;
+}
+
+#email_usuario{
+    margin: none;
 }

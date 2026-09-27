@@ -17,8 +17,8 @@
         <div id="sidebar">
 
             <h3 id="classconnect">ClassConnect</h3>
-            <h3 id = "ajuda"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
-            <h3><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
+            <h3 id = "ajuda" onclick="expandir_ajuda()"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
+            <h3 onclick="exibir_minhaconta()"><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
             <button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
 
         </div>
@@ -26,7 +26,6 @@
         <div id = "maincard" class = "btnprincipais">
 
             <a href="criar_turma.html">Criar Turma</a>
-            <a href="">Verificar turmas</a>
             <a href="designar_professor.html">Adicionar professor a turma</a>
             <img id="isha" src="assets/isha_tela_menu_escola.png">
 
@@ -45,6 +44,20 @@
                 </div>
 
             </div>
+
+        </div>
+
+        <div id="ajudapopup">
+
+            <h3 id="oquesomos">O que é o ClassConnect?</h3>
+            <p id="oquesomostexto">O ClassConnect é um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagógicos relacionados. Aqui na tela de escola você pode criar turmas clicando em "Criar turma" e designar professores a turmas clicando em "Adicionar professor a turma". Obrigado por testar e agradecemos qualquer feedback!</p>
+
+        </div>
+
+        <div id="minha_contapopup">
+
+            <h2 id="usuario"></h2>
+            <h4 id="email_usuario"></h3>
 
         </div>
     </div>

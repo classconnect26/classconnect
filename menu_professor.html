@@ -16,8 +16,8 @@
         <div id = "sidebar">
             
             <h3 id = "classconnect">ClassConnect</h3>
-            <h3 id = "ajuda"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
-            <h3><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
+            <h3 id = "ajuda" onclick="expandir_ajuda()"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
+            <h3 id = "minha_conta" onclick="exibir_minhaconta()"><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
             <button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
 
         </div>
@@ -55,7 +55,7 @@
         <div id="ajudapopup">
 
             <h3 id="oquesomos">O que é o ClassConnect?</h3>
-            <p id="oquesomostexto">O ClassConnect é um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagógicos relacionados. Aqui na tela de aluno você pode consultar a sua turma clicando em "Minha turma", verificar suas tarefas em "Tarefas" e as matérias em... Bem, em "Matérias". Obrigado por testar e agradecemos qualquer feedback!</p>
+            <p id="oquesomostexto">O ClassConnect é um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagógicos relacionados. Aqui na tela de professor você pode enviar uma tarefa clicando em "Enviar tarefa", verificar as turmas que leciona em "Turmas" e as tarefas que enviou em "Tarefas enviadas". Obrigado por testar e agradecemos qualquer feedback!</p>
 
         </div>
 
@@ -65,7 +65,7 @@
             <h4 id="email_usuario"></h3>
 
         </div>
-        
+
     </div>
 
     <script src="scriptmenu_professor.js"></script>

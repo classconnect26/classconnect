@@ -27,7 +27,7 @@ function conf_saida_popup() {
 
 function sair() {
     localStorage.clear();
-    window.location.href = 'login_aluno.html';
+    window.location.href = 'index.html';
 }
 
 function fecharPopup() {

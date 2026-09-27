@@ -2,7 +2,7 @@ const selectEscola = document.getElementById("escola");
 
 async function carregarEscolas() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/escola');
+        const resposta = await fetch('http://localhost:3000/api/escola-cadastro');
         const escolas = await resposta.json();
 
         escolas.forEach(escola => {

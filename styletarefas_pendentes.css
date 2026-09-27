@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+body, .container{
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: #E6E6FA;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: auto;
+    height: auto;
+}
+h1{
+    color: white;
+    margin-top: 1vh;
+}
+
+#lista{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#tarefas{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    background-color: #9474c7;
+    flex-direction: column;
+    width: 60vw;
+    min-height: 70vh;
+    height: auto;
+    box-shadow: -20px -40px 0 #6a5291;
+    padding: 2vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.tarefa{
+    background-color: white;
+    width: 15vw;
+    min-height: 10vh;
+    justify-self: center;
+    margin-top: 3vh;
+    padding: 1vw;
+    overflow-wrap: anywhere;
+}
+
+.btn-concluir{
+    display: block;
+    margin-top: 2vh;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    border: none;
+    background-color: #9474c7;
+    color: white;
+    font-weight: bold;
+}
+
+#isha{
+    position: relative;
+    width: 8vw;
+    right: -25vw;
+    bottom: -3vh;
+}
+
+#confirm_concluir{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100000;
+}
+
+#seta{
+    position: fixed;
+    width: 3vw;
+    height: auto;
+    left: 1vw;
+    top: 1vh;
+    cursor: pointer;
+}
+
+#concluir_cont{
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botoes_concluir{
+    display: flex;
+    gap: 2vw;
+    margin-top: 3vh;
+}
+
+h3{
+    color: white;
+}
+
+.confirmacao{
+    display: flex;
+    height: 4.5vh;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    font-size: 2vh;
+    background: #E6D7FF;
+    border: 2px solid #734F96;
+    font-weight: bold;
+    color: #734F96;
+    cursor: pointer;
+}

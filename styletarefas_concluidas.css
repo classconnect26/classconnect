@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+#seta{
+    position: fixed;
+    width: 3vw;
+    height: auto;
+    left: 1vw;
+    top: 1vh;
+    cursor: pointer;
+}
+
+body, .container{
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: #E6E6FA;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: auto;
+    height: auto;
+}
+h1{
+    color: white;
+    margin-top: 1vh;
+}
+
+#lista{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#tarefas{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    background-color: #9474c7;
+    flex-direction: column;
+    width: 60vw;
+    min-height: 70vh;
+    height: auto;
+    box-shadow: -20px -40px 0 #6a5291;
+    padding: 2vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.tarefa{
+    background-color: lime;
+    width: 15vw;
+    min-height: 10vh;
+    justify-self: center;
+    margin-top: 3vh;
+    padding: 1vw;
+    overflow-wrap: anywhere;
+}
+
+#isha{
+    position: relative;
+    width: 8vw;
+    right: -25vw;
+    bottom: -3vh;
+}

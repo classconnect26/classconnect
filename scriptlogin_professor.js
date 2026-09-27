@@ -16,8 +16,10 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         const resultado = await resposta.json();
         
         if (resposta.ok) {
+            localStorage.clear();
+            localStorage.setItem('professorId', resultado.id);
             alert(`Login bem-sucedido! Bem-vindo, ${resultado.nome}.`);
-            window.location.href = "passou.html";
+            window.location.href = "menu_professor.html";
         } else {
             alert(`Erro no login: ${resultado.erro}`);
         }

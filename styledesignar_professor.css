@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    display: flex;
+    background-color: #E6E6FA;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form{
+    position: relative;
+    border-radius: 40px;
+    align-items: left;
+    display: flex;
+    background-color: #9474c7;
+    flex-direction: column;
+    width: 50vw;
+    height: 70vh;
+    box-shadow: -20px -40px 0 #6a5291;
+}
+
+#seta{
+    position: absolute;
+    width: 3vw;
+    height: auto;
+    left: 1vw;
+    top: 1vh;
+    cursor: pointer;
+}
+
+#isha{
+    position: absolute;
+    width: 12vw;
+    bottom: 1%;
+    right: 3%;
+}
+
+h2{
+    align-self: center;
+    color: white;
+    font-size: 4vh;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+input, select{
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    width: 60%;
+    height: 10vh;
+    margin-bottom: 2vh;
+    padding: 1vw;
+    border: none;
+    background-color: white;
+    font-size: 3vh;
+}
+
+#criar{
+    position: absolute;
+    margin-left: 2vw;
+    padding: 0;
+    width: 17%;
+    display: flex;
+    height: 4.5vh;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    font-size: 2vh;
+    background: #E6D7FF;
+    border: 2px solid #734F96;
+    font-weight: bold;
+    color: #734F96;
+    cursor: pointer;
+    bottom: 10vh;
+}

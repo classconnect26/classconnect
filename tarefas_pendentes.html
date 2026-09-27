@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas Pendentes</title>
+    <link rel="stylesheet" href="styletarefas_pendentes.css">
+</head>
+<body>
+    <div class="container">
+
+        <a id="voltar" href="tarefas_aluno.html"><img id="seta" src="assets/icon_seta.png"></a>
+
+        <div id="tarefas">
+            <h1 id="titulo">Tarefas Pendentes</h1>
+            <div id="lista">
+
+
+
+            </div>
+
+            <img id="isha" src="assets/isha_com_lupa_kk.png">
+
+        </div>
+
+        <!-- popups, deixar sempre no final do html!!!-->
+
+        <div id="confirm_concluir">
+
+            <div id="concluir_cont">
+
+                <h3>Deseja concluir esta tarefa?</h3>
+                <div id="botoes_concluir">
+
+                    <button class="confirmacao" onclick="concluirTarefa()">Sim</button>
+                    <button class="confirmacao" onclick="fecharPopupConcluir()">Não</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripttarefas_pendentes.js"></script>
+</body>
+</html>

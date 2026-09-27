@@ -13,9 +13,13 @@ document.querySelector('form').addEventListener('submit', async (event) => {
             body: JSON.stringify(dados)
         });
 
+        const resultado = await resposta.json();
+
         if (resposta.ok) {
+            localStorage.clear();
+            localStorage.setItem('escolaId', resultado.id)
             alert("Login realizado com sucesso!");
-            window.location.href = "passou.html";
+            window.location.href = "menu_escola.html";
         }
         else {
             alert("Erro no login: " + (await resposta.json()).erro);

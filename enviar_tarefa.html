@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar tarefa</title>
+    <link rel="stylesheet" href="styleenviar_tarefa.css">
+</head>
+<body>
+    <div class="container">
+
+        <img id = "seta" src="assets/icon_seta.png" onclick="retornar()">
+
+        <form id="form">
+            <img id="isha" src="assets/isha_no_computador_kk.png">
+
+            <h2 id="titulo">Enviar tarefa</h2>
+            <input id="recado" type="text" placeholder="Compartilhar com sua turma..." required>
+            <textarea id="descricao" placeholder="Tarefa..." required></textarea>
+            <input type="file" id="arquivo">
+            <select id="turma" required>
+                <option value="">Turma</option>
+            </select>
+
+            <button id="enviar" type="submit">Enviar</button>
+        </form>
+
+    </div>
+
+    <script src="scriptenviar_tarefa.js"></script>
+</body>
+</html>

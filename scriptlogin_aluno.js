@@ -16,6 +16,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         const resultado = await resposta.json();
 
         if (resposta.ok) {
+            localStorage.clear();
             localStorage.setItem('alunoId', resultado.id);
             console.log("Aluno logado com ID:", localStorage.getItem('alunoId'));
             alert(`Login bem-sucedido! Bem-vindo, ${resultado.nome}.`);

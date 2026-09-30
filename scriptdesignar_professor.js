@@ -6,7 +6,7 @@ if(escolaId === 0){
 
 async function exibirTurmas() {
     try{
-        const resposta = await fetch('http://localhost:3000/api/turmas-escola', {
+        const resposta = await fetch('/api/turmas-escola', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({escolaId})
@@ -42,7 +42,7 @@ document.querySelector('form').addEventListener('submit', async (evento) => {
             disciplina: disciplina
         }
 
-        const resposta = await fetch('http://localhost:3000/designar-professor', {
+        const resposta = await fetch('/designar-professor', {
 
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

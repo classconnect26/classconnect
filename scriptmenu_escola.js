@@ -6,7 +6,7 @@ if (escolaId === null) {
 
 async function MostrarNome() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/escola', {
+        const resposta = await fetch('/api/escola', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: escolaId })
@@ -73,7 +73,7 @@ async function exibir_minhaconta(){
         document.getElementById('minha_contapopup').style.display = 'block'
 
         try{
-            const resposta = await fetch('http://localhost:3000/api/escola', {
+            const resposta = await fetch('/api/escola', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({id: localStorage.getItem('escolaId')})

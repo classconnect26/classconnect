@@ -6,7 +6,7 @@ if (alunoId === 0) {
 
 async function MostrarNome() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/aluno', {
+        const resposta = await fetch('/api/aluno', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: alunoId })
@@ -56,7 +56,7 @@ function expandir_turma(){
 
         async function exibiralunos() {
         try{
-            const resposta = await fetch('http://localhost:3000/api/colegas', {
+            const resposta = await fetch('/api/colegas', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({id: localStorage.getItem('alunoId')})
@@ -114,7 +114,7 @@ async function expandir_materias(){
 
         async function exibiralunos() {
         try{
-            const resposta = await fetch('http://localhost:3000/api/materias-aluno', {
+            const resposta = await fetch('/api/materias-aluno', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({alunoId: localStorage.getItem('alunoId')})
@@ -177,7 +177,7 @@ async function exibir_minhaconta(){
         document.getElementById('minha_contapopup').style.display = 'block'
 
         try{
-            const resposta = await fetch('http://localhost:3000/api/aluno', {
+            const resposta = await fetch('/api/aluno', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({id: localStorage.getItem('alunoId')})

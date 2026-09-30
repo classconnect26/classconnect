@@ -6,7 +6,7 @@ if (professorId === 0){
 
 async function exibirTurmas() {
     try{
-        const resposta = await fetch('http://localhost:3000/api/tarefas-enviadas',{
+        const resposta = await fetch('/api/tarefas-enviadas',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({professorId: professorId})

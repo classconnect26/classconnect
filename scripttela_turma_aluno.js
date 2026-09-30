@@ -2,7 +2,7 @@ const id = Number(localStorage.getItem('alunoId'))
 
 async function exibiralunos() {
     try{
-        const resposta = await fetch('http://localhost:3000/api/colegas', {
+        const resposta = await fetch('/api/colegas', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({id})

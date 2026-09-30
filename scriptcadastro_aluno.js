@@ -4,7 +4,7 @@ inputTurma.disabled = true;
 
 async function carregarEscolas() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/escola-cadastro');
+        const resposta = await fetch('/api/escola-cadastro');
         const escolas = await resposta.json();
 
         escolas.forEach(escola => {
@@ -69,7 +69,7 @@ document.querySelector('form').addEventListener('submit', async (evento) => {
     };
 
     try {
-        const resposta = await fetch('http://localhost:3000/cadastrar-aluno', {
+        const resposta = await fetch('/cadastrar-aluno', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(dados)

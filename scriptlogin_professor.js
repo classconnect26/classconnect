@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     const dados = { nome, senha };
 
     try {
-        const resposta = await fetch('http://localhost:3000/login-professor', {
+        const resposta = await fetch('/login-professor', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(dados)

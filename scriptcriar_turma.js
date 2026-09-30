@@ -11,7 +11,7 @@ document.querySelector('form').addEventListener('submit', async (event) =>{
     }
 
     try{
-        const resposta = await fetch('http://localhost:3000/criar-turma', {
+        const resposta = await fetch('/criar-turma', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(dados)

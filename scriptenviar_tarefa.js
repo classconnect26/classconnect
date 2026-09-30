@@ -6,7 +6,7 @@ if (id === 0){
 
 async function exibirturmas() {
     try{
-        const resposta = await fetch('http://localhost:3000/api/turmas-professor',{
+        const resposta = await fetch('/api/turmas-professor',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({id})
@@ -45,7 +45,7 @@ document.getElementById('form').addEventListener('submit', async (event) => {
     }
 
     try{
-        const resposta = await fetch('http://localhost:3000/enviar-tarefa', {
+        const resposta = await fetch('/enviar-tarefa', {
             method: 'POST',
             body: dados
         });

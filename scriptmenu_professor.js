@@ -6,7 +6,7 @@ if (professorId === null) {
 
 async function MostrarNome() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/professor', {
+        const resposta = await fetch('/api/professor', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: professorId })
@@ -63,7 +63,7 @@ async function exibirTurmas() {
         turmasdiv.style.fontWeight = 'normal';
     try{
 
-        const resposta = await fetch('http://localhost:3000/api/turmas-professor', {
+        const resposta = await fetch('/api/turmas-professor', {
 
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -125,7 +125,7 @@ async function exibir_minhaconta(){
         document.getElementById('minha_contapopup').style.display = 'block'
 
         try{
-            const resposta = await fetch('http://localhost:3000/api/professor', {
+            const resposta = await fetch('/api/professor', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({id: localStorage.getItem('professorId')})

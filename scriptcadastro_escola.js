@@ -1,6 +1,6 @@
 document.querySelector('form').addEventListener('submit', async (evento) => {
         evento.preventDefault();
-        
+    
         const escola = document.getElementById('escola').value;
         const cnpj = document.getElementById('cnpj').value;
         const senha = document.getElementById('senha').value;
@@ -28,7 +28,7 @@ document.querySelector('form').addEventListener('submit', async (evento) => {
         };
 
         try {
-            const resposta = await fetch('http://localhost:3000/cadastrar-escola', {
+            const resposta = await fetch('/cadastrar-escola', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(dados)

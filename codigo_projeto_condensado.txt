@@ -1,0 +1,2185 @@
+﻿===== cadastro_aluno.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="stylecadastro_aluno.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">CADASTRO</h2>
+</div>
+<form>
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input type="text" id="nome" name="nome" placeholder="nome de usuÃ¡rio" required>
+<input type="text" id="email" name="email" placeholder="seu@email.com" required>
+<input type="password" id="senha" name="senha" placeholder="senha" required>
+<input type="password" id="csenha" name="csenha" placeholder="confirmar senha" required>
+<div class="btnladoalado">
+<input id="turma" type="text" name="turma" placeholder="turma" required disabled>
+<select id="escola" name="escola" placeholder="escola" required>
+<option value="">Selecione uma escola</option>
+</select>
+</div>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptcadastro_aluno.js"></script>
+</body>
+</html>
+
+===== cadastro_escola.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="stylecadastro_escola.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">CADASTRO</h2>
+</div>
+<form>
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input id="escola" type="text" name="Escola" placeholder="nome da escola" required>
+<input id="cnpj" type="text" name="cnpj" placeholder="CNPJ" required>
+<input id="senha" type="password" name="Senha" placeholder="senha" required>
+<input id="csenha" type="password" name="CSenha" placeholder="confirmar senha" required>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptcadastro_escola.js"></script>
+</body>
+</html>
+
+===== cadastro_professor.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="stylecadastro_professor.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">CADASTRO</h2>
+</div>
+<form action="" method="post">
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input type="text" id="usuario" name="UsuÃ¡rio" placeholder="nome de usuÃ¡rio" required>
+<input type="text" id="email" name="E-mail" placeholder="seu@email.com" required>
+<input type="password" id="senha" name="Senha" placeholder="senha" required>
+<input type="password" id="csenha" name="CSenha" placeholder="confirmar senha" required>
+<div class="btnladoalado">
+<select id="escola" name="escola" placeholder="escola" required>
+<option value="">Selecione uma escola</option>
+</select>
+</div>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptcadastro_professor.js"></script>
+</body>
+</html>
+
+===== criar_turma.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar Turma</title>
+<link rel="stylesheet" href="stylecriar_turma.css">
+</head>
+<body>
+<div class="container">
+<a id="retornar" href="menu_escola.html"><img id = "seta" src="assets/icon_seta.png" onclick="retornar()"></a>
+<form id="form">
+<img id="isha" src="assets/isha_com_lampada_muito_feia_kkkkkkkkkkkkk.png">
+<h2 id="titulo">Criar Turma</h2>
+<input id="turma" type="text" placeholder="Nome / nÃºmero da turma" required>
+<button type="submit" id="criar">Criar</button>
+</form>
+</div>
+<script src="scriptcriar_turma.js"></script>
+</body>
+</html>
+
+===== designar_professor.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicionar Professor</title>
+<link rel="stylesheet" href="styledesignar_professor.css">
+</head>
+<body>
+<div class="container">
+<a id="retornar" href="menu_escola.html"><img id = "seta" src="assets/icon_seta.png" onclick="retornar()"></a>
+<form id="form">
+<img id="isha" src="assets/isha_com_lampada_muito_feia_kkkkkkkkkkkkk.png">
+<h2 id="titulo">Adicionar Professor</h2>
+<input id="professor" type="text" placeholder="Nome do professor" required>
+<select id="Turma" placeholder="Turma" required>
+<option value="">Selecione uma turma</option>
+</select>
+<input id="disciplina" type="text" placeholder="MatÃ©ria lecionada" required>
+<button type="submit" id="criar">Adicionar</button>
+</form>
+</div>
+<script src="scriptdesignar_professor.js"></script>
+</body>
+</html>
+
+===== enviar_tarefa.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enviar tarefa</title>
+<link rel="stylesheet" href="styleenviar_tarefa.css">
+</head>
+<body>
+<div class="container">
+<img id = "seta" src="assets/icon_seta.png" onclick="retornar()">
+<form id="form">
+<img id="isha" src="assets/isha_no_computador_kk.png">
+<h2 id="titulo">Enviar tarefa</h2>
+<input id="recado" type="text" placeholder="Compartilhar com sua turma..." required>
+<textarea id="descricao" placeholder="Tarefa..." required></textarea>
+<input type="file" id="arquivo">
+<select id="turma" required>
+<option value="">Turma</option>
+</select>
+<button id="enviar" type="submit">Enviar</button>
+</form>
+</div>
+<script src="scriptenviar_tarefa.js"></script>
+</body>
+</html>
+
+===== escolhacadastro.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="styleescolhacadastro.css">
+</head>
+<body>
+<div class="container">
+<div class="caixaitens">
+<h1>Cadastrar como:</h1>
+<div class="btnladolado">
+<a href="cadastro_professor.html">Professor(a)</a>
+<a href="cadastro_aluno.html">Aluno(a)</a>
+</div>
+<a id="escola" href="cadastro_escola.html">Escola</a>
+</div>
+<img id="fundo" src="assets/fundo_tela_escolha.png">
+<img id="logo" src="assets/tela_escolha_logo.png">
+</div>
+</body>
+</html>
+
+===== escolhalogin.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<link rel="stylesheet" href="styleescolhacadastro.css">
+</head>
+<body>
+<div class="container">
+<div class="caixaitens">
+<h1>Login como:</h1>
+<div class="btnladolado">
+<a href="login_professor.html">Professor(a)</a>
+<a href="login_aluno.html">Aluno(a)</a>
+</div>
+<a id="escola" href="login_escola.html">Escola</a>
+</div>
+<img id="fundo" src="assets/fundo_tela_escolha.png">
+<img id="logo" src="assets/tela_escolha_logo.png">
+</div>
+</body>
+</html>
+
+===== index.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boas vindas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styleboasvindas.css">
+</head>
+<body>
+<div class="container">
+<img id="logo"src="assets/tela_boasvindas_logo.PNG">
+<div class="itens">
+<div class="itensesquerda">
+<div class="texto">
+<h1 id="titulo">Seja bem-vindo(a) ao<br>ClassConnect</h1>
+<p id="paragrafo">Aqui vocÃª poderÃ¡ estudar, se conectar e<br>melhorar seu desempenho cada vez mais, de<br>forma simples e organizada!</p>
+</div>
+<div class="botoes">
+<a href="escolhalogin.html">Login</a>
+<a href="escolhacadastro.html">Cadastro</a>
+</div>
+</div>
+</div>
+<img id="splash" src="assets/splasheffect.png" width="">
+</div>
+<script src="index_script.js"></script>
+</body>
+</html>
+
+===== index_script.js =====
+const alunoId = localStorage.getItem('alunoId');
+const professorId = localStorage.getItem('professorId');
+const escolaId = localStorage.getItem('escolaId');
+if (alunoId !== null) {
+window.location.href = 'menu_aluno.html';
+}
+if (professorId !== null) {
+window.location.href = 'menu_professor.html';
+}
+if (escolaId !== null) {
+window.location.href = 'menu_escola.html';
+}
+
+===== login_aluno.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="stylecadastro_aluno.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">LOGIN</h2>
+</div>
+<form>
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input type="text" id="nome" name="nome" placeholder="seu@email.com" required>
+<input type="password" id="senha" name="senha" placeholder="senha" required>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+<a href="cadastro_aluno.html">NÃ£o possui uma conta? Cadastre-se</a>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptlogin_aluno.js"></script>
+</body>
+</html>
+
+===== login_escola.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="stylecadastro_escola.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">LOGIN</h2>
+</div>
+<form>
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input id="escola" type="text" name="Escola" placeholder="CNPJ" required>
+<input id="senha" type="password" name="Senha" placeholder="senha" required>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+<a href="cadastro_escola.html">NÃ£o possui uma conta? Cadastre-se</a>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptlogin_escola.js"></script>
+</body>
+</html>
+
+===== login_professor.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="stylecadastro_professor.css">
+</head>
+<body>
+<div class="container">
+<div class="form_box">
+<div class="backimg">
+<img id="pomba" src="assets/tela de cadastro - pomba.png" width="20%" height="20%">
+<h2 id="cadastro">LOGIN</h2>
+</div>
+<form action="" method="post">
+<div class="inputs">
+<img id="usericon" src="assets/usercadastro.png" width="30%" height="30%">
+<input type="text" id="nome" name="nome" placeholder="seu@email.com" required>
+<input type="password" id="senha" name="senha" placeholder="senha" required>
+<button type="submit" name="AvanÃ§ar">AvanÃ§ar</button>
+<a href="cadastro_professor.html">NÃ£o possui uma conta? Cadastre-se</a>
+</div>
+</form>
+</div>
+</div>
+<script src="scriptlogin_professor.js"></script>
+</body>
+</html>
+
+===== menu_aluno.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassConnect</title>
+<link rel="stylesheet" href="stylemenu_aluno.css">
+</head>
+<body>
+<div class="container">
+<h1 id = "ola"></h1>
+<img id = "logo_inicio" src="assets/logo_menu_principal.png">
+<img id = "btnmenu" class = "icon" src="assets/botao_sidebar.png" onclick="sidebar()">
+<div id = "sidebar">
+<h3 id = "classconnect">ClassConnect</h3>
+<h3 id = "ajuda" onclick="expandir_ajuda()"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
+<h3 id = "minha_conta" onclick="exibir_minhaconta()"><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
+<button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
+</div>
+<div id = "turma" class = "btnprincipais" onclick="expandir_turma()">
+<p>Minha<br>turma</p>
+</div>
+<a class = "btnprincipais" href="tarefas_aluno.html">Tarefas</a>
+<div id="materias" class = "btnprincipais" onclick="expandir_materias()">MatÃ©rias</div>
+<div id="confirm_saida">
+<div id="saida_cont">
+<h3>Deseja realmente sair?</h3>
+<div id="botoes_saida">
+<button class = "confirmacao" onclick="sair()">Sim</button>
+<button class = "confirmacao" onclick="fecharPopup()">NÃ£o</button>
+</div>
+</div>
+</div>
+<div id="ajudapopup">
+<h3 id="oquesomos">O que Ã© o ClassConnect?</h3>
+<p id="oquesomostexto">O ClassConnect Ã© um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagÃ³gicos relacionados. Aqui na tela de aluno vocÃª pode consultar a sua turma clicando em "Minha turma", verificar suas tarefas em "Tarefas" e as matÃ©rias em... Bem, em "MatÃ©rias". Obrigado por testar e agradecemos qualquer feedback!</p>
+</div>
+<div id="minha_contapopup">
+<h2 id="usuario"></h2>
+<h4 id="email_usuario"></h3>
+</div>
+</div>
+<script src="scriptmenu_aluno.js"></script>
+</body>
+</html>
+
+===== menu_escola.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassConnect</title>
+<link rel="stylesheet" href="stylemenu_escola.css">
+</head>
+<body>
+<div class="container">
+<h1 id = "ola"></h1>
+<img id = "btnmenu" class = "icon" src="assets/botao_sidebar.png" onclick="sidebar()">
+<img id = "pilar_esquerda" src="assets/pilar_menu_escola_esquerda.png">
+<img id="pilares_direita" src="assets/pilares_direita_menu_escola.png">
+<div id="sidebar">
+<h3 id="classconnect">ClassConnect</h3>
+<h3 id = "ajuda" onclick="expandir_ajuda()"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
+<h3 onclick="exibir_minhaconta()"><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
+<button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
+</div>
+<div id = "maincard" class = "btnprincipais">
+<a href="criar_turma.html">Criar Turma</a>
+<a href="designar_professor.html">Adicionar professor a turma</a>
+<img id="isha" src="assets/isha_tela_menu_escola.png">
+</div>
+<div id="confirm_saida">
+<div id="saida_cont">
+<h3>Deseja realmente sair?</h3>
+<div id="botoes_saida">
+<button class = "confirmacao" onclick="sair()">Sim</button>
+<button class = "confirmacao" onclick="fecharPopup()">NÃ£o</button>
+</div>
+</div>
+</div>
+<div id="ajudapopup">
+<h3 id="oquesomos">O que Ã© o ClassConnect?</h3>
+<p id="oquesomostexto">O ClassConnect Ã© um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagÃ³gicos relacionados. Aqui na tela de escola vocÃª pode criar turmas clicando em "Criar turma" e designar professores a turmas clicando em "Adicionar professor a turma". Obrigado por testar e agradecemos qualquer feedback!</p>
+</div>
+<div id="minha_contapopup">
+<h2 id="usuario"></h2>
+<h4 id="email_usuario"></h3>
+</div>
+</div>
+<script src="scriptmenu_escola.js"></script>
+</body>
+</html>
+
+===== menu_professor.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassConnect</title>
+<link rel="stylesheet" href="stylemenu_professor.css">
+</head>
+<body>
+<div class="container">
+<img id = 'bolinhas' src="assets/bolinhascantinho.png">
+<h1 id = "ola"></h1>
+<img id = "btnmenu" class = "icon" src="assets/botao_sidebar.png" onclick="sidebar()">
+<div id = "sidebar">
+<h3 id = "classconnect">ClassConnect</h3>
+<h3 id = "ajuda" onclick="expandir_ajuda()"><img class = "icon" src="assets/icone_interrogacao.png">Ajuda</h3>
+<h3 id = "minha_conta" onclick="exibir_minhaconta()"><img class = 'icon' src="assets/icone_user_menu.png">Minha conta</h3>
+<button type="button" id = "btnsair" onclick="conf_saida_popup()">Sair</button>
+</div>
+<img id = 'isha' src="assets/isha_sentada_menuprofessor.png">
+<div id = 'cardsprincipais'>
+<div id="cardsesquerda">
+<div id = 'envtarefa' class = "btnesquerda" onclick="redenviartarefa()">Enviar tarefa</div>
+</div>
+<div id = 'cardsdireita'>
+<div id = 'turmas' class = "btndireita" onclick="exibirTurmas()">Turmas</div>
+<div id = 'tarefasenviadas' class = "btndireita" onclick="redtarefasenviadas()">Tarefas<br>enviadas</div>
+</div>
+</div>
+<div id="confirm_saida">
+<div id="saida_cont">
+<h3>Deseja realmente sair?</h3>
+<div id="botoes_saida">
+<button class = "confirmacao" onclick="sair()">Sim</button>
+<button class = "confirmacao" onclick="fecharPopup()">NÃ£o</button>
+</div>
+</div>
+</div>
+<div id="ajudapopup">
+<h3 id="oquesomos">O que Ã© o ClassConnect?</h3>
+<p id="oquesomostexto">O ClassConnect Ã© um site focado em consulta e gerenciamento de alunos, turmas, professores, tarefas e outros assuntos pedagÃ³gicos relacionados. Aqui na tela de professor vocÃª pode enviar uma tarefa clicando em "Enviar tarefa", verificar as turmas que leciona em "Turmas" e as tarefas que enviou em "Tarefas enviadas". Obrigado por testar e agradecemos qualquer feedback!</p>
+</div>
+<div id="minha_contapopup">
+<h2 id="usuario"></h2>
+<h4 id="email_usuario"></h3>
+</div>
+</div>
+<script src="scriptmenu_professor.js"></script>
+</body>
+</html>
+
+===== passou.html =====
+<h2>ParabÃ©ns! VocÃª passou.</h2>
+<style>
+body {
+display: flex;
+background-color: pink;
+align-items: center;
+justify-content: center;
+}
+</style>
+
+===== scriptcadastro_aluno.js =====
+const selectEscola = document.getElementById("escola");
+const inputTurma = document.getElementById("turma");
+inputTurma.disabled = true;
+async function carregarEscolas() {
+try {
+const resposta = await fetch('/api/escola-cadastro');
+const escolas = await resposta.json();
+escolas.forEach(escola => {
+const opcao = document.createElement("option");
+opcao.value = escola.id_escola;
+opcao.textContent = escola.nome;
+selectEscola.appendChild(opcao);
+});
+} catch (erro) {
+console.error("Erro ao carregar escolas:", erro);
+}
+}
+carregarEscolas();
+selectEscola.addEventListener("change", () => {
+if (selectEscola.value !== "") {
+inputTurma.disabled = false;
+}else{
+inputTurma.disabled = true;
+}
+});
+document.querySelector('form').addEventListener('submit', async (evento) => {
+evento.preventDefault();
+function validarEmail(email) {
+const teste = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return teste.test(email);
+}
+if (!validarEmail(document.getElementById('email').value)) {
+alert("Email invÃ¡lido!");
+return;
+}
+const nome = document.getElementById('nome').value;
+const email = document.getElementById('email').value;
+const senha = document.getElementById('senha').value;
+const turma = inputTurma.value;
+const id_escola = selectEscola.value;
+if (senha.length < 6) {
+alert("Senha deve ter pelo menos 6 caracteres!");
+return;
+}
+if (senha !== document.getElementById('csenha').value) {
+alert("Senha e confirmar senha nÃ£o coincidem!");
+return;
+}
+const dados = {
+nome: nome,
+email: email,
+senha: senha,
+turma: turma,
+id_escola: id_escola
+};
+try {
+const resposta = await fetch('/cadastrar-aluno', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify(dados)
+})
+const resultado = await resposta.json();
+if (resposta.ok) {
+alert(`Sucesso! Bem vindo ao ClassConnect, ${resultado.nome}.\nAgora, faÃ§a o login para acessar a plataforma.`);
+document.querySelector('form').reset();
+window.location.href = "login_aluno.html";
+} else {
+alert(`Erro: ${resultado.erro}`);
+}
+}catch (erro) {
+console.error("Erro na requisiÃ§Ã£o:", erro);
+alert("NÃ£o foi possÃ­vel conectar ao servidor backend. O seu server.js estÃ¡ ligado?");
+}
+})
+
+===== scriptcadastro_escola.js =====
+document.querySelector('form').addEventListener('submit', async (evento) => {
+evento.preventDefault();
+const escola = document.getElementById('escola').value;
+const cnpj = document.getElementById('cnpj').value;
+const senha = document.getElementById('senha').value;
+const csenha = document.getElementById('csenha').value;
+if (senha.length < 6 || csenha.length < 6) {
+alert("Senha deve ter pelo menos 6 caracteres!");
+return;
+}
+if (senha !== csenha) {
+alert("Senha e confirmaÃ§Ã£o de senha nÃ£o coincidem!");
+return;
+}
+if (cnpj.length !== 14) {
+alert("CNPJ deve ter 14 dÃ­gitos!");
+return;
+}
+const dados ={
+nome: escola,
+cnpj: cnpj,
+senha: senha
+};
+try {
+const resposta = await fetch('/cadastrar-escola', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify(dados)
+});
+const resultado = await resposta.json();
+if (resposta.ok) {
+alert(`Sucesso! Bem vindo ao ClassConnect, ${resultado.nome}.\nAgora, faÃ§a o login para acessar a plataforma.`);
+document.querySelector('form').reset();
+window.location.href = "login_escola.html";
+} else {
+alert(`Erro ao cadastrar: ${resultado.erro}`);
+}
+} catch (erro) {
+console.error("Erro na requisiÃ§Ã£o:", erro);
+alert("NÃ£o foi possÃ­vel conectar ao servidor backend. O seu server.js estÃ¡ ligado?");
+}
+});
+
+===== scriptcadastro_professor.js =====
+const selectEscola = document.getElementById("escola");
+async function carregarEscolas() {
+try {
+const resposta = await fetch('/api/escola-cadastro');
+const escolas = await resposta.json();
+escolas.forEach(escola => {
+const opcao = document.createElement("option");
+opcao.value = escola.id_escola;
+opcao.textContent = escola.nome;
+selectEscola.appendChild(opcao);
+});
+} catch (erro) {
+console.error("Erro ao carregar escolas:", erro);
+}
+}
+carregarEscolas();
+document.querySelector('form').addEventListener('submit', async (evento) => {
+evento.preventDefault();
+const nome = document.getElementById('usuario').value;
+const email = document.getElementById('email').value;
+const senha = document.getElementById('senha').value;
+const id_escola = selectEscola.value;
+if (senha.length < 6) {
+alert("Senha deve ter pelo menos 6 caracteres!");
+return;
+}
+if (senha !== document.getElementById('csenha').value) {
+alert("Senha e confirmar senha nÃ£o coincidem!");
+return;
+}
+function validarEmail(email) {
+const teste = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return teste.test(email);
+}
+if (!validarEmail(email)) {
+alert("Email invÃ¡lido!");
+return;
+}
+const dados = { nome, email, senha, id_escola };
+try {
+const resposta = await fetch('/cadastrar-professor', {
+method: 'POST',
+headers: {'content-type': 'application/json'},
+body: JSON.stringify(dados)
+})
+const resultado = await resposta.json();
+if (resposta.ok) {
+alert(`Sucesso! Bem vindo ao ClassConnect, ${resultado.nome}.\nAgora, faÃ§a o login para acessar a plataforma.`);
+window.location.href = "login_professor.html";
+} else {
+alert(`Erro: ${resultado.erro}`);
+}
+}catch (erro) {
+console.error("Erro na requisiÃ§Ã£o:", erro);
+alert("NÃ£o foi possÃ­vel conectar ao servidor backend. O seu server.js estÃ¡ ligado?");
+}})
+
+===== scriptcriar_turma.js =====
+const escolaId = localStorage.getItem('escolaId');
+document.querySelector('form').addEventListener('submit', async (event) =>{
+event.preventDefault();
+const turma = document.getElementById('turma').value;
+const dados ={
+turma: turma,
+escolaId: escolaId
+}
+try{
+const resposta = await fetch('/criar-turma', {
+method: 'POST',
+headers: {'content-type': 'application/json'},
+body: JSON.stringify(dados)
+})
+const resultado = await resposta.json();
+if(!resposta.ok){
+alert(resultado.erro);
+return;
+}
+alert(resultado.mensagem);
+document.querySelector('form').reset();
+}catch (error){}
+})
+
+===== scriptdesignar_professor.js =====
+const escolaId = Number(localStorage.getItem('escolaId'));
+if(escolaId === 0){
+window.location.href = 'login_escola.html'
+}
+async function exibirTurmas() {
+try{
+const resposta = await fetch('/api/turmas-escola', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({escolaId})
+});
+const turmas = await resposta.json();
+turmas.forEach(turma => {
+const opcao = document.createElement('option');
+opcao.value = turma.id_turma;
+opcao.textContent = turma.nome;
+document.getElementById('Turma').appendChild(opcao);
+});
+}catch(error){}
+}
+exibirTurmas();
+document.querySelector('form').addEventListener('submit', async (evento) => {
+evento.preventDefault();
+const turmaId = document.getElementById('Turma').value;
+const professor = document.getElementById('professor').value;
+const disciplina = document.getElementById('disciplina').value
+try{
+const dados = {
+turmaId: turmaId,
+professor: professor,
+disciplina: disciplina
+}
+const resposta = await fetch('/designar-professor', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify(dados)
+})
+const resultado = await resposta.json();
+if(!resposta.ok){
+alert(resultado.erro);
+return;
+}
+alert(resultado.mensagem);
+}catch(error){}
+})
+
+===== scriptenviar_tarefa.js =====
+const id = Number(localStorage.getItem('professorId'));
+if (id === 0){
+window.location.href = 'login_professor.html';
+}
+async function exibirturmas() {
+try{
+const resposta = await fetch('/api/turmas-professor',{
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id})
+})
+const turmas = await resposta.json();
+turmas.forEach(turma => {
+const opcao = document.createElement("option");
+opcao.value = turma.id_turma;
+opcao.textContent = turma.nome;
+document.getElementById('turma').appendChild(opcao);
+});
+}catch(error){
+console.log(error);
+}
+}
+exibirturmas();
+document.getElementById('form').addEventListener('submit', async (event) => {
+event.preventDefault();
+const dados = new FormData();
+dados.append('titulo', document.getElementById('recado').value);
+dados.append('descricao', document.getElementById('descricao').value);
+dados.append('turmaId', document.getElementById('turma').value);
+dados.append('professorId', id);
+if(document.getElementById('arquivo').files.length > 0){
+dados.append('arquivo', document.getElementById('arquivo').files[0]);
+}
+try{
+const resposta = await fetch('/enviar-tarefa', {
+method: 'POST',
+body: dados
+});
+const resultado = await resposta.json();
+if (!resposta.ok){
+alert (resultado.erro);
+return;
+}
+alert('Tarefa enviada!\nEnvie para mais turmas, se desejar.');
+}catch(error){
+console.error(error);
+}
+})
+function retornar(){
+window.location.href = 'menu_professor.html'
+}
+
+===== scriptlogin_aluno.js =====
+document.querySelector('form').addEventListener('submit', async (event) => {
+event.preventDefault();
+const nome = document.getElementById('nome').value;
+const senha = document.getElementById('senha').value;
+const dados = { nome, senha };
+try {
+const resposta = await fetch('/login-aluno', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify(dados),
+});
+const resultado = await resposta.json();
+if (resposta.ok) {
+localStorage.clear();
+localStorage.setItem('alunoId', resultado.id);
+console.log("Aluno logado com ID:", localStorage.getItem('alunoId'));
+alert(`Login bem-sucedido! Bem-vindo, ${resultado.nome}.`);
+window.location.href = "menu_aluno.html";
+} else {
+alert(`Erro no login: ${resultado.erro}`);
+}
+} catch (error) {
+console.error("Erro ao realizar login:", error);
+alert("Erro ao realizar login.");
+}})
+
+===== scriptlogin_escola.js =====
+document.querySelector('form').addEventListener('submit', async (event) => {
+event.preventDefault();
+const nome = document.getElementById('escola').value;
+const senha = document.getElementById('senha').value;
+const dados = { nome, senha };
+try {
+const resposta = await fetch('/login-escola', {
+method: 'POST',
+headers: {'content-type': 'application/json'},
+body: JSON.stringify(dados)
+});
+const resultado = await resposta.json();
+if (resposta.ok) {
+localStorage.clear();
+localStorage.setItem('escolaId', resultado.id)
+alert("Login realizado com sucesso!");
+window.location.href = "menu_escola.html";
+}
+else {
+alert("Erro no login: " + (await resposta.json()).erro);
+}
+}catch (error) {
+console.error("Erro ao realizar login:", error);
+alert("Erro ao realizar login.");
+}})
+
+===== scriptlogin_professor.js =====
+document.querySelector('form').addEventListener('submit', async (event) => {
+event.preventDefault();
+const nome = document.getElementById('nome').value;
+const senha = document.getElementById('senha').value;
+const dados = { nome, senha };
+try {
+const resposta = await fetch('/login-professor', {
+method: 'POST',
+headers: {'content-type': 'application/json'},
+body: JSON.stringify(dados)
+});
+const resultado = await resposta.json();
+if (resposta.ok) {
+localStorage.clear();
+localStorage.setItem('professorId', resultado.id);
+alert(`Login bem-sucedido! Bem-vindo, ${resultado.nome}.`);
+window.location.href = "menu_professor.html";
+} else {
+alert(`Erro no login: ${resultado.erro}`);
+}
+} catch (error) {
+console.error("Erro ao realizar login (script):", error);
+alert("Erro ao realizar login.");
+}
+});
+
+===== scriptmenu_aluno.js =====
+const alunoId = Number(localStorage.getItem('alunoId'));
+if (alunoId === 0) {
+window.location.href = 'login_aluno.html';
+}
+async function MostrarNome() {
+try {
+const resposta = await fetch('/api/aluno', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ id: alunoId })
+});
+const aluno = await resposta.json();
+document.getElementById('ola').textContent = `OlÃ¡, ${aluno.nome}`;
+} catch (error) {
+console.error("Erro ao buscar dados do aluno:", error);
+}
+}
+MostrarNome();
+function conf_saida_popup() {
+document.getElementById('confirm_saida').style.display = 'flex';
+}
+function sair() {
+localStorage.clear();
+window.location.href = 'index.html';
+}
+function fecharPopup() {
+document.getElementById('confirm_saida').style.display = 'none';
+}
+function sidebar(){
+if(document.getElementById('sidebar').style.width !== '20%'){
+document.getElementById('sidebar').style.width = '20%';
+document.getElementById('sidebar').style.contentVisibility = 'visible';
+}
+else{
+document.getElementById('sidebar').style.contentVisibility = 'hidden';
+document.getElementById('sidebar').style.width = '5%';
+}
+}
+function expandir_turma(){
+const turma = document.getElementById('turma');
+if (turma.style.height !== 'fit-content'){
+turma.style.minWidth = '20vw';
+turma.style.height = 'fit-content';
+turma.style.minHeight = '15vh'
+turma.style.padding = '1vw'
+turma.style.fontWeight = 'normal';
+async function exibiralunos() {
+try{
+const resposta = await fetch('/api/colegas', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id: localStorage.getItem('alunoId')})
+})
+const dados = await resposta.json();
+const colegas = dados.colegas;
+const turmadoaluno = dados.turma;
+if (!resposta.ok) {
+console.error(dados.erro);
+return;
+}
+const lista = colegas.map(colegas =>
+{
+if(colegas.id_aluno === alunoId){
+return `${colegas.nome} (vocÃª)`;
+}
+return colegas.nome;
+}
+)
+turma.innerHTML = turmadoaluno + ':<br>' + lista.join('<br>');
+}catch (erro){
+console.log(erro)
+}
+};
+exibiralunos();
+}
+else{
+turma.style.width = '20vw';
+turma.style.height = '15vh';
+turma.style.fontWeight = 'bold';
+turma.style.padding = 'auto';
+turma.style.paddingLeft = '0.5vw'
+turma.innerHTML = 'Minha<br>turma';
+}
+}
+async function expandir_materias(){
+const materias = document.getElementById('materias');
+if (materias.style.height !== 'fit-content'){
+materias.style.minWidth = '20vw';
+materias.style.height = 'fit-content';
+materias.style.minHeight = '15vh'
+materias.style.padding = '1vw'
+materias.style.fontWeight = 'normal';
+async function exibiralunos() {
+try{
+const resposta = await fetch('/api/materias-aluno', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({alunoId: localStorage.getItem('alunoId')})
+})
+const resultado = await resposta.json();
+if(!resposta.ok){
+materias.innerHTML = resultado.erro;
+return;
+}
+const lista = resultado.map(materias => materias.disciplina);
+materias.innerHTML = lista.join('<br>');
+}catch (erro){
+console.log(erro)
+}
+};
+exibiralunos();
+}
+else{
+materias.style.width = '20vw';
+materias.style.height = '15vh';
+materias.style.fontWeight = 'bold';
+materias.style.padding = 'auto';
+materias.style.paddingLeft = '0.5vw'
+materias.innerHTML = 'MatÃ©rias';
+}
+}
+let ajudacontrole = 0;
+let minhacontacontrole = 0
+function expandir_ajuda(){
+document.getElementById('minha_contapopup').style.display = 'none'
+minhacontacontrole = 0;
+if(ajudacontrole === 1){
+document.getElementById('ajudapopup').style.display = 'none'
+ajudacontrole = 0;
+}
+else{
+document.getElementById('ajudapopup').style.display = 'block'
+ajudacontrole = 1;
+}
+}
+async function exibir_minhaconta(){
+document.getElementById('ajudapopup').style.display = 'none';
+ajudacontrole = 0;
+if(minhacontacontrole === 0){
+minhacontacontrole = 1;
+document.getElementById('minha_contapopup').style.display = 'block'
+try{
+const resposta = await fetch('/api/aluno', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id: localStorage.getItem('alunoId')})
+})
+const resultado = await resposta.json();
+document.getElementById('usuario').textContent = resultado.nome;
+document.getElementById('email_usuario').textContent = resultado.email;
+}catch(error){
+}
+}
+else{
+minhacontacontrole = 0
+document.getElementById('minha_contapopup').style.display = 'none';
+}
+}
+
+===== scriptmenu_escola.js =====
+const escolaId = localStorage.getItem('escolaId');
+if (escolaId === null) {
+window.location.href = 'login_escola.html';
+}
+async function MostrarNome() {
+try {
+const resposta = await fetch('/api/escola', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ id: escolaId })
+});
+const escola = await resposta.json();
+document.getElementById('ola').textContent = `OlÃ¡, ${escola.nome}`;
+} catch (error) {
+console.error("Erro ao buscar dados do professor:", error);
+}
+}
+MostrarNome();
+function conf_saida_popup() {
+document.getElementById('confirm_saida').style.display = 'flex';
+}
+function sair() {
+localStorage.clear();
+window.location.href = 'index.html';
+}
+function fecharPopup() {
+document.getElementById('confirm_saida').style.display = 'none';
+}
+function sidebar(){
+if(document.getElementById('sidebar').style.minHeight !== '30vh'){
+document.getElementById('sidebar').style.minHeight = '30vh';
+document.getElementById('sidebar').style.contentVisibility = 'visible';
+}
+else{
+document.getElementById('sidebar').style.contentVisibility = 'hidden';
+document.getElementById('sidebar').style.minHeight = '10vh';
+}
+}
+let ajudacontrole = 0;
+let minhacontacontrole = 0
+function expandir_ajuda(){
+document.getElementById('minha_contapopup').style.display = 'none'
+minhacontacontrole = 0;
+if(ajudacontrole === 1){
+document.getElementById('ajudapopup').style.display = 'none'
+ajudacontrole = 0;
+}
+else{
+document.getElementById('ajudapopup').style.display = 'block'
+ajudacontrole = 1;
+}
+}
+async function exibir_minhaconta(){
+document.getElementById('ajudapopup').style.display = 'none';
+ajudacontrole = 0;
+if(minhacontacontrole === 0){
+minhacontacontrole = 1;
+document.getElementById('minha_contapopup').style.display = 'block'
+try{
+const resposta = await fetch('/api/escola', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id: localStorage.getItem('escolaId')})
+})
+const resultado = await resposta.json();
+document.getElementById('usuario').textContent = resultado.nome;
+document.getElementById('email_usuario').textContent = resultado.cnpj;
+}catch(error){
+}
+}
+else{
+minhacontacontrole = 0
+document.getElementById('minha_contapopup').style.display = 'none';
+}
+}
+
+===== scriptmenu_professor.js =====
+const professorId = localStorage.getItem('professorId');
+if (professorId === null) {
+window.location.href = 'login_professor.html';
+}
+async function MostrarNome() {
+try {
+const resposta = await fetch('/api/professor', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ id: professorId })
+});
+const professor = await resposta.json();
+document.getElementById('ola').textContent = `OlÃ¡, ${professor.nome}`;
+} catch (error) {
+console.error("Erro ao buscar dados do professor:", error);
+}
+}
+MostrarNome();
+function conf_saida_popup() {
+document.getElementById('confirm_saida').style.display = 'flex';
+}
+function sair() {
+localStorage.clear();
+window.location.href = 'index.html';
+}
+function fecharPopup() {
+document.getElementById('confirm_saida').style.display = 'none';
+}
+function sidebar(){
+if(document.getElementById('sidebar').style.width !== '20vw'){
+document.getElementById('sidebar').style.width = '20vw';
+document.getElementById('sidebar').style.contentVisibility = 'visible';
+}
+else{
+document.getElementById('sidebar').style.contentVisibility = 'hidden';
+document.getElementById('sidebar').style.width = '5vw';
+}
+}
+function redenviartarefa(){
+window.location.href = 'enviar_tarefa.html'
+}
+function redtarefasenviadas(){
+window.location.href = 'tarefas_enviadas.html'
+}
+async function exibirTurmas() {
+const turmasdiv = document.getElementById('turmas');
+if(turmasdiv.style.height !== 'fit-content'){
+turmasdiv.style.minWidth = '20vw';
+turmasdiv.style.height = 'fit-content';
+turmasdiv.style.minHeight = '15vh'
+turmasdiv.style.padding = '1vw'
+turmasdiv.style.fontWeight = 'normal';
+try{
+const resposta = await fetch('/api/turmas-professor', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id: professorId})
+})
+const turmas = await resposta.json();
+if(!resposta.ok){
+turmasdiv.innerHTML = turmas.erro;
+return;
+}
+const lista = turmas.map(turmas => turmas.nome);
+turmasdiv.innerHTML = lista.join('<br>');
+}catch(error){
+console.log(error);
+}
+}
+else{
+turmasdiv.style.width = '20vw';
+turmasdiv.style.height = '15vh';
+turmasdiv.style.fontWeight = 'bold';
+turmasdiv.style.padding = 'auto';
+turmasdiv.style.paddingLeft = '0.5vw'
+turmasdiv.innerHTML = 'Turmas';
+}
+}
+let ajudacontrole = 0;
+let minhacontacontrole = 0
+function expandir_ajuda(){
+document.getElementById('minha_contapopup').style.display = 'none'
+minhacontacontrole = 0;
+if(ajudacontrole === 1){
+document.getElementById('ajudapopup').style.display = 'none'
+ajudacontrole = 0;
+}
+else{
+document.getElementById('ajudapopup').style.display = 'block'
+ajudacontrole = 1;
+}
+}
+async function exibir_minhaconta(){
+document.getElementById('ajudapopup').style.display = 'none';
+ajudacontrole = 0;
+if(minhacontacontrole === 0){
+minhacontacontrole = 1;
+document.getElementById('minha_contapopup').style.display = 'block'
+try{
+const resposta = await fetch('/api/professor', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id: localStorage.getItem('professorId')})
+})
+const resultado = await resposta.json();
+document.getElementById('usuario').textContent = resultado.nome;
+document.getElementById('email_usuario').textContent = resultado.email;
+}catch(error){
+}
+}
+else{
+minhacontacontrole = 0
+document.getElementById('minha_contapopup').style.display = 'none';
+}
+}
+
+===== scripttarefas_concluidas.js =====
+const alunoId = Number(localStorage.getItem('alunoId'));
+if(alunoId === 0){
+window.location.href = 'login_aluno.html';
+}
+async function exibirTarefas(){
+try{
+const resposta = await fetch('/api/tarefas-concluidas',{
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({alunoId})
+});
+const tarefas = await resposta.json();
+if(!resposta.ok){
+console.error(tarefas.erro);
+return;
+}
+const lista = document.getElementById('lista');
+tarefas.forEach(tarefa => {
+const div = document.createElement('div');
+div.classList.add('tarefa');
+div.innerHTML = `
+<h2>${tarefa.titulo}</h2>
+<p>${tarefa.descricao}<br>MatÃ©ria: ${tarefa.disciplina}</p>
+`;
+if(tarefa.nome_arquivo){
+const arquivo = document.createElement('a');
+const caminho = tarefa.caminho_arquivo.replaceAll('\\', '/');
+arquivo.href = `/${caminho}`;
+arquivo.textContent = `Download: ${tarefa.nome_arquivo}`;
+arquivo.download = tarefa.nome_arquivo;
+div.appendChild(arquivo);
+}
+lista.appendChild(div);
+});
+}catch(error){
+console.error(error);
+}
+}
+exibirTarefas();
+
+===== scripttarefas_enviadas.js =====
+const professorId = Number(localStorage.getItem('professorId'));
+if (professorId === 0){
+window.location.href = 'login_professor.html';
+}
+async function exibirTurmas() {
+try{
+const resposta = await fetch('/api/tarefas-enviadas',{
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({professorId: professorId})
+});
+const resultado = await resposta.json();
+const lista = document.getElementById('lista');
+resultado.tarefas.forEach(tarefa => {
+const div = document.createElement('div');
+div.classList.add('tarefa');
+div.innerHTML = `
+<h2>${tarefa.titulo}</h2>
+<p>${tarefa.descricao}</p>
+`;
+const destinos = resultado.destino.filter(destino => destino.fk_tarefa_id_tarefa === tarefa.id_tarefa);
+const nomesTurmas = destinos.map(destino => {
+const turma = resultado.turmas.find(turma => turma.id_turma === destino.fk_turma_id_turma);
+return turma.nome;
+});
+const p = document.createElement('p');
+p.textContent = `Turma: ${nomesTurmas}`;
+div.appendChild(p);
+lista.appendChild(div);
+});
+}catch(error){
+console.error(error);
+}
+}
+exibirTurmas();
+
+===== scripttarefas_pendentes.js =====
+const alunoId = Number(localStorage.getItem('alunoId'));
+if (alunoId === 0){
+window.location.href = 'login_aluno.html';
+}
+async function exibirTarefas(){
+try{
+const resposta = await fetch('/api/tarefas-aluno',{
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({alunoId})
+})
+const tarefas = await resposta.json();
+console.log(tarefas);
+if (!resposta.ok){
+console.error(tarefas.error)
+return;
+}
+const lista = document.getElementById('lista');
+tarefas.forEach(tarefa => {
+const div = document.createElement('div');
+div.classList.add('tarefa');
+div.innerHTML = `
+<h2>${tarefa.titulo}</h2>
+<p>${tarefa.descricao}<br>MatÃ©ria: ${tarefa.disciplina}</p>
+`;
+if(tarefa.nome_arquivo){
+const arquivo = document.createElement('a');
+const caminho = tarefa.caminho_arquivo.replaceAll('\\', '/');
+arquivo.href = `/${caminho}`;
+arquivo.textContent = `Download: ${tarefa.nome_arquivo}`;
+arquivo.download = tarefa.nome_arquivo;
+div.appendChild(arquivo);
+}
+const botao = document.createElement('button');
+botao.textContent = 'Concluir tarefa';
+botao.classList.add('btn-concluir');
+botao.onclick = () => conf_concluir_popup(tarefa.id_tarefa);
+div.appendChild(botao);
+lista.appendChild(div);
+});
+}catch(error){
+console.error(error);
+}
+}
+exibirTarefas();
+let tarefaSelecionada;
+function conf_concluir_popup(tarefaId){
+tarefaSelecionada = tarefaId;
+document.getElementById('confirm_concluir').style.display = 'flex';
+}
+function fecharPopupConcluir(){
+document.getElementById('confirm_concluir').style.display = 'none';
+}
+async function concluirTarefa(){
+try{
+const resposta = await fetch('/concluir-tarefa',{
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({alunoId: alunoId, tarefaId: tarefaSelecionada})
+});
+const resultado = await resposta.json();
+if(!resposta.ok){
+console.error(resultado.erro);
+return;
+}
+fecharPopupConcluir();
+location.reload();
+}catch(error){
+console.error(error);
+}
+}
+
+===== scripttela_turma_aluno.js =====
+const id = Number(localStorage.getItem('alunoId'))
+async function exibiralunos() {
+try{
+const resposta = await fetch('/api/colegas', {
+method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: JSON.stringify({id})
+})
+const colegas = await resposta.json();
+if (!resposta.ok) {
+console.error(colegas.erro);
+return;
+}
+const lista = colegas.map(colegas =>
+{
+if(colegas.id_aluno === id){
+return `${colegas.nome} (vocÃª)`;
+}
+return colegas.nome;
+}
+)
+document.getElementById('lista').innerHTML = lista.join('<br>');
+}catch (erro){
+console.log(erro)
+}
+};
+exibiralunos();
+
+===== server.js =====
+const express = require('express');
+const { Pool } = require('pg');
+const cors = require('cors');
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'})
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use('/uploads', express.static('uploads'))
+app.use(express.static(__dirname));
+const pool = new Pool({
+user: 'postgres',
+host: 'localhost',
+database: 'classconnect',
+password: '1909',
+port: 5432,
+});
+app.listen(3000, () => {
+console.log("Servidor backend rodando em ");
+});
+app.post('/cadastrar-escola', async (req, res) => {
+const { nome, cnpj, senha } = req.body;
+try {
+const cnpjExistente = await pool.query('SELECT * FROM escola WHERE cnpj = $1', [cnpj]);
+if (cnpjExistente.rows.length > 0) {
+return res.status(400).json({ erro: "CNPJ jÃ¡ cadastrado." });
+}
+const resultado = await pool.query('INSERT INTO escola (nome, cnpj, senha) VALUES ($1, $2, $3) RETURNING nome', [nome, cnpj, senha]);
+return res.status(201).json({
+nome: resultado.rows[0].nome,
+caca: "popo"
+});
+} catch (error) {
+console.error("Erro no banco:", error);
+return res.status(500).json({ erro: "Erro ao salvar no banco de dados." });
+}
+});
+app.post('/cadastrar-aluno', async (req, res) => {
+try{
+const  { nome, email, senha, turma, id_escola } = req.body;
+const emailExistente = await pool.query('SELECT * FROM aluno WHERE email = $1', [email]);
+if (emailExistente.rows.length > 0) {
+return res.status(400).json({ erro: "Email jÃ¡ cadastrado." });
+}
+const resultado = await pool.query('SELECT id_turma FROM turma WHERE LOWER(nome) = LOWER($1) AND fk_escola_id_escola = $2', [turma, id_escola]);
+if (resultado.rows.length === 0) {
+return res.status(400).json({ erro: "Turma nÃ£o encontrada para a escola selecionada." });
+}
+const id_turma = resultado.rows[0].id_turma;
+const resultadoAluno = await pool.query('INSERT INTO aluno (nome, email, senha, fk_turma_id_turma) VALUES ($1, $2, $3, $4) RETURNING nome', [nome, email, senha, id_turma]);
+const quantalunoupdate = await pool.query('SELECT COUNT(*) AS quantidade FROM aluno WHERE fk_turma_id_turma = $1', [id_turma])
+const quantidade = quantalunoupdate.rows[0].quantidade;
+await pool.query('UPDATE turma SET quant_alunos = $1 WHERE id_turma = $2', [quantidade, id_turma])
+return res.status(201).json({
+mensagem: "Aluno cadastrado com sucesso!" ,
+nome: resultadoAluno.rows[0].nome
+});
+}catch (error) {
+console.error("Erro ao cadastrar aluno:", error);
+return res.status(500).json({ erro: "Erro ao cadastrar aluno." });
+}
+})
+app.post('/cadastrar-professor', async (req, res) => {
+try{
+const  { nome, email, senha, id_escola } = req.body;
+const emailExistente = await pool.query('SELECT * FROM professor WHERE email = $1', [email]);
+if (emailExistente.rows.length > 0) {
+return res.status(400).json({ erro: "Email jÃ¡ cadastrado." });
+}
+const resposta = await pool.query('INSERT INTO professor (nome, email, senha) VALUES ($1, $2, $3) RETURNING nome, id_professor', [nome, email, senha]);
+await pool.query('INSERT INTO professor_escola_trabalha (fk_professor_id_professor, fk_escola_id_escola) VALUES ($1, $2)', [resposta.rows[0].id_professor, id_escola]);
+return res.status(201).json({
+mensagem: "Professor cadastrado com sucesso!" ,
+nome: resposta.rows[0].nome
+});
+}catch (error) {
+console.error("Erro ao cadastrar professor:", error);
+return res.status(500).json({ erro: "Erro ao cadastrar professor." });
+}
+})
+app.post('/criar-turma', async (req, res) => {
+try{
+const {turma, escolaId} = req.body;
+const checarturma = await pool.query('SELECT * FROM turma WHERE nome = $1 AND fk_escola_id_escola = $2', [turma, escolaId]);
+if(checarturma.rows.length > 0){
+return res.status(400).json({erro: 'Turma jÃ¡ criada no sistema, tente outro nome.'})
+}
+const resposta = await pool.query('INSERT INTO turma (quant_alunos, fk_escola_id_escola, nome) VALUES (0, $1, $2) RETURNING id_turma, nome', [escolaId, turma])
+return res.status(201).json({ mensagem: 'Turma criada!', nome: resposta.rows[0].nome})
+}catch (error){
+console.error('Erro ao criar turma: ', error);
+return res.status(500).json({ erro: 'Erro ao criar turma.' })
+}
+})
+app.post('/login-aluno', async (req, res) => {
+try {
+const { nome, senha } = req.body;
+const resultado = await pool.query('SELECT * FROM aluno WHERE email = $1', [nome]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "Email nÃ£o encontrado." });
+}
+const aluno = resultado.rows[0];
+if (aluno.senha !== senha) {
+return res.status(401).json({ erro: "Senha incorreta." });
+}
+return res.status(200).json({ mensagem: "Login realizado com sucesso!", nome: aluno.nome, id: aluno.id_aluno });
+} catch (error) {
+console.error("Erro ao realizar login:", error);
+return res.status(500).json({ erro: "Erro ao realizar login." });
+}
+});
+app.post('/login-escola', async (req, res) => {
+try {
+const { nome, senha } = req.body;
+const resultado = await pool.query('SELECT * FROM escola WHERE cnpj = $1', [nome]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "CNPJ nÃ£o encontrado." });
+}
+const escola = resultado.rows[0];
+if (escola.senha !== senha) {
+return res.status(401).json({ erro: "Senha incorreta." });
+}
+return res.status(200).json({id: escola.id_escola});
+} catch (error) {
+console.error("Erro ao realizar login:", error);
+return res.status(500).json({ erro: "Erro ao realizar login." });
+}
+})
+app.post('/login-professor', async (req, res) => {
+try {
+const { nome, senha } = req.body;
+const resultado = await pool.query('SELECT * FROM professor WHERE email = $1', [nome]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "Email nÃ£o encontrado." });
+}
+const professor = resultado.rows[0];
+if (professor.senha !== senha) {
+return res.status(401).json({ erro: "Senha incorreta." });
+}
+return res.status(200).json({ mensagem: "Login realizado com sucesso!", nome: professor.nome , id: professor.id_professor});
+} catch (error) {
+console.error("Erro ao realizar login:", error);
+return res.status(500).json({ erro: "Erro ao realizar login." });
+}
+})
+app.get('/api/escola-cadastro', async (req, res) => {
+try {
+const resultado = await pool.query('SELECT * FROM escola ORDER BY nome');
+res.json(resultado.rows);
+} catch (error) {
+console.error("Erro ao buscar escolas:", error);
+res.status(500).json({ erro: "Erro ao buscar escolas." });
+}
+})
+app.post('/designar-professor', async (req, res) => {
+try{
+const { professor, turmaId, disciplina } = req.body;
+const professorIdcheck = await pool.query('SELECT id_professor FROM professor WHERE nome = $1', [professor])
+if(professorIdcheck.rows.length === 0){
+return res.status(404).json({erro: 'Professor nÃ£o cadastrado nessa escola.'});
+}
+const professorId = professorIdcheck.rows[0].id_professor;
+const professorcheck = await pool.query('SELECT * FROM professor_turma_leciona WHERE fk_professor_id_professor = $1 AND fk_turma_id_turma = $2', [professorId, turmaId]);
+if(professorcheck.rows.length > 0){
+return res.status(400).json({erro: 'Professor jÃ¡ leciona essa turma.'})
+}
+const resultado = await pool.query('INSERT INTO professor_turma_leciona (fk_professor_id_professor, fk_turma_id_turma, disciplina) VALUES ($1, $2, $3) RETURNING disciplina', [professorId, turmaId, disciplina]);
+res.json({mensagem: `Professor designado lecionando ${resultado.rows[0].disciplina}!`})
+}catch(error){
+console.error(error);
+res.json({erro: `Erro interno do servidor: ${error}`})
+}
+})
+app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
+try{
+const {titulo, descricao, turmaId, professorId} = req.body;
+const arquivo = req.file;
+const disciplina = await pool.query('SELECT disciplina FROM professor_turma_leciona WHERE fk_professor_id_professor = $1 AND fk_turma_id_turma = $2', [professorId, turmaId])
+let nomearquivo = null;
+let caminhoarquivo = null;
+if (arquivo){
+nomearquivo = arquivo.originalname;
+caminhoarquivo = arquivo.path;
+}
+const resultado = await pool.query('INSERT INTO tarefa (titulo, fk_professor_id_professor, descricao, nome_arquivo, caminho_arquivo, disciplina) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id_tarefa', [titulo, professorId, descricao, nomearquivo, caminhoarquivo, disciplina.rows[0].disciplina]);
+await pool.query('INSERT INTO tarefa_turma_destino (fk_tarefa_id_tarefa, fk_turma_id_turma) VALUES ($1, $2)', [resultado.rows[0].id_tarefa, turmaId]);
+res.status(201).json({id: resultado.rows[0].id_tarefa});
+}catch(error){
+console.error(error);
+res.status(500).json({erro: 'Erro ao enviar.'})
+}
+})
+app.post('/concluir-tarefa', async (req, res) => {
+try{
+const { alunoId, tarefaId } = req.body;
+await pool.query('INSERT INTO aluno_tarefa_concluida (fk_aluno_id_aluno, fk_tarefa_id_tarefa) VALUES ($1, $2)', [alunoId, tarefaId]);
+res.json({ mensagem: 'Tarefa concluÃ­da!' });
+}catch(error){
+console.error(error);
+res.status(500).json({ erro: 'Erro ao concluir tarefa.' });
+}
+});
+app.post('/api/professor', async (req, res) =>
+{
+const { id } = req.body;
+try {
+const resultado = await pool.query('SELECT * FROM professor WHERE id_professor = $1', [id]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "Professor nÃ£o encontrado." });
+}
+res.json(resultado.rows[0]);
+} catch (error) {
+console.error("Erro ao buscar dados do professor:", error);
+return res.status(500).json({ erro: "Erro ao buscar dados do professor." });
+}
+})
+app.post('/api/aluno', async (req, res) => {
+const { id } = req.body;
+try {
+const resultado = await pool.query('SELECT * FROM aluno WHERE id_aluno = $1', [id]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "Aluno nÃ£o encontrado." });
+}
+res.json(resultado.rows[0]);
+} catch (error) {
+console.error("Erro ao buscar dados do aluno:", error);
+return res.status(500).json({ erro: "Erro ao buscar dados do aluno." });
+}
+});
+app.post('/api/colegas', async (req, res) => {
+const {id} = req.body;
+try {
+const turmaresultado = await pool.query('SELECT fk_turma_id_turma FROM aluno WHERE id_aluno = $1', [id]);
+const turma = await pool.query('SELECT nome FROM turma WHERE id_turma = $1', [turmaresultado.rows[0].fk_turma_id_turma]);
+if(turmaresultado.rows.length === 0){
+return res.status(404).json({erro: 'aluno nÃ£o encontrado.'});
+}
+const idturma = turmaresultado.rows[0].fk_turma_id_turma;
+const alunosresultado = await pool.query('SELECT nome, id_aluno FROM aluno WHERE fk_turma_id_turma = $1 ORDER BY nome', [idturma]);
+res.json({colegas: alunosresultado.rows, turma: turma.rows[0].nome});
+}catch (error){
+console.error('Erro ao buscar colegas de turma');
+res.status(500).json({erro: 'Erro interno do servidor'});
+}
+})
+app.post('/api/escola', async (req, res) =>
+{
+const { id } = req.body;
+try {
+const resultado = await pool.query('SELECT * FROM escola WHERE id_escola = $1', [id]);
+if (resultado.rows.length === 0) {
+return res.status(404).json({ erro: "Escola nÃ£o encontrado." });
+}
+res.json(resultado.rows[0]);
+} catch (error) {
+console.error("Erro ao buscar dados do escola:", error);
+return res.status(500).json({ erro: "Erro ao buscar dados do escola." });
+}
+})
+app.post('/api/turmas-professor', async (req, res) =>
+{
+try{
+const { id } = req.body;
+const turmaId = await pool.query('SELECT fk_turma_id_turma FROM professor_turma_leciona WHERE fk_professor_id_professor = $1', [id]);
+if (turmaId.rows.length === 0){
+return res.status(404).json({erro: 'VocÃª nÃ£o leciona nanhuma turma ainda'});
+}
+const idsTurmas = turmaId.rows.map(turma => turma.fk_turma_id_turma);
+const turmas = await pool.query('SELECT * FROM turma WHERE id_turma = ANY($1)', [idsTurmas]);
+res.json(turmas.rows);
+}catch(error){
+console.error(error);
+return res.status(500).json({erro: 'Erro ao buscar turmas'});
+}
+})
+app.post('/api/tarefas-aluno', async (req, res) => {
+try{
+const { alunoId } = req.body;
+const turmaId = await pool.query('SELECT fk_turma_id_turma FROM aluno WHERE id_aluno = $1', [alunoId])
+const buscartarefas = await pool.query('SELECT * FROM tarefa_turma_destino WHERE fk_turma_id_turma = $1', [turmaId.rows[0].fk_turma_id_turma])
+if (buscartarefas.rows.length === 0){
+return res.status(404).json({erro: 'Tarefas nÃ£o encontradas'});
+}
+const idtarefas = buscartarefas.rows.map(tarefa => tarefa.fk_tarefa_id_tarefa)
+const tarefas = await pool.query('SELECT * FROM tarefa WHERE id_tarefa = ANY($1) AND id_tarefa NOT IN (SELECT fk_tarefa_id_tarefa FROM aluno_tarefa_concluida WHERE fk_aluno_id_aluno = $2)', [idtarefas, alunoId])
+res.json(tarefas.rows);
+}catch(error){
+console.error(error);
+res.status(500).json({erro: 'Erro ao buscar tarefas'});
+}
+})
+app.post('/api/tarefas-concluidas', async (req, res) => {
+try{
+const { alunoId } = req.body;
+const tarefasConcluidas = await pool.query('SELECT fk_tarefa_id_tarefa FROM aluno_tarefa_concluida WHERE fk_aluno_id_aluno = $1', [alunoId]);
+if(tarefasConcluidas.rows.length === 0){
+return res.status(404).json({ erro: 'Nenhuma tarefa concluÃ­da.' });
+}
+const idtarefas = tarefasConcluidas.rows.map(tarefa => tarefa.fk_tarefa_id_tarefa);
+const tarefas = await pool.query('SELECT * FROM tarefa WHERE id_tarefa = ANY($1)', [idtarefas]);
+res.json(tarefas.rows);
+}catch(error){
+console.error(error);
+res.status(500).json({ erro: 'Erro ao buscar tarefas concluÃ­das.' });
+}
+});
+app.post('/api/turmas-escola', async (req, res) => {
+try{
+const { escolaId } = req.body;
+const turmas = await pool.query('SELECT id_turma, nome FROM turma WHERE fk_escola_id_escola = $1 ORDER BY nome', [escolaId]);
+res.json(turmas.rows);
+}catch(error){
+console.log(error);
+}
+})
+app.post('/api/tarefas-enviadas', async (req, res) => {
+try{
+const { professorId } = req.body;
+const tarefascheck = await pool.query('SELECT * FROM tarefa WHERE fk_professor_id_professor = $1', [professorId]);
+const tarefas = tarefascheck.rows.map(tarefa => tarefa.id_tarefa);
+const turmascheck = await pool.query('SELECT * FROM tarefa_turma_destino WHERE fk_tarefa_id_tarefa = ANY($1)', [tarefas])
+const turmascheck2 = turmascheck.rows.map(turmas => turmas.fk_turma_id_turma);
+const turmas = await pool.query('SELECT * FROM turma WHERE id_turma = ANY($1)', [turmascheck2]);
+res.json({tarefas: tarefascheck.rows, turmas: turmas.rows, destino: turmascheck.rows})
+}catch(error){
+console.log(error);
+};
+})
+app.post('/api/materias-aluno', async (req, res) => {
+try{
+const { alunoId } = req.body;
+const turma = await pool.query('SELECT * FROM aluno WHERE id_aluno = $1', [alunoId]);
+const disciplina = await pool.query('SELECT disciplina FROM professor_turma_leciona WHERE fk_turma_id_turma = $1', [turma.rows[0].fk_turma_id_turma]);
+if(disciplina.rows.length === 0){
+return res.status(404).json({erro: 'VocÃª ainda nÃ£o tem nenhuma matÃ©ria.'})
+}
+res.json(disciplina.rows);
+}catch(error){
+console.log(error);
+}
+})
+
+===== styleboasvindas.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body{background:#E6E6FA;}
+.container{display:flex;flex-direction:column;width:100vw;height:100vh;background:#E6E6FA;}
+#logo{display:flex;height:auto;width:15%;margin-top:2%;margin-left:2%;user-select:none;pointer-events:none;}
+#titulo{display:flex;width:max-content;text-align:center;align-self:center;font-size:6vh;color:#5B3B8C;}
+.texto{display:flex;width:max-content;flex-direction:column;}
+#paragrafo{font-family:"Roboto Slab";margin-top:7%;text-align:center;font-size:4vh;font-weight:500;color:#734F96;}
+.botoes{margin-top:8%;display:flex;flex-direction:row;width:max-content;gap:5vw;}
+a:active{background:#755975;}
+.itensesquerda{margin-top:5%;margin-left:2%;width:max-content;display:flex;flex-direction:column;align-items:center;}
+.itens{display:flex;flex-direction:row;}
+#splash{border-radius:0;display:flex;height:auto;width:40vw;position:fixed;right:0%;bottom:0%;user-select:none;pointer-events:none;}
+a{text-decoration:none;display:flex;height:8vh;align-items:center;justify-content:center;width:10vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+
+
+===== stylecadastro_aluno.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body{background-color:#5C4B8A;}
+a{text-decoration:none;color:#734F96;font-size:2vh;margin-top:2.5vh;}
+.container{width:100vw;height:100vh;display:flex;margin:auto;align-items:center;justify-content:center;}
+input,select{padding:5px;margin:5px;width:100%;border:2px solid #734F96;margin-bottom:2.5vh;background:transparent;padding-left:1vw;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+button:active{background:#755975;}
+.form_box{display:flex;flex-direction:row;background:white;width:75vw;height:80vh;border-radius:20px;align-items:center;position:relative;}
+form{width:100%;height:100%;display:flex;align-items:center;}
+.inputs{align-items:center;display:flex;width:25vw;flex-direction:column;position:absolute;left:50%;}
+.backimg{display:flex;flex-direction:column;background-image:url("assets/colunacadastro.png");background-size:100% 100%;background-position:center;width:30%;height:100%;align-items:flex-end;position:absolute;border-radius:20px;}
+#cadastro{display:flex;background-color:white;position:absolute;top:30%;right:5%;height:6vh;width:12vw;align-items:center;justify-content:center;font-size:2.5vh;border-radius:10px;color:#734F96;}
+#turma{width:7vw;margin:auto;}
+.btnladoalado{display:flex;width:100%;flex-direction:row;margin-top:2.5vh;margin-bottom:2.5vh;}
+#escola{margin:auto;width:12vw;}
+#usericon{margin-bottom:3vh;user-select:none;pointer-events:none;}
+#pomba{display:flex;position:absolute;bottom:80%;left:99%;user-select:none;pointer-events:none;}
+
+
+===== stylecadastro_escola.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body{background-color:#5C4B8A;}
+.container{width:100vw;height:100vh;display:flex;margin:auto;align-items:center;justify-content:center;}
+a{text-decoration:none;color:#734F96;font-size:2vh;margin-top:2.5vh;}
+input{padding:5px;margin:5px;width:100%;border:2px solid #734F96;margin-bottom:2.5vh;background:transparent;padding-left:1vw;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+button:active{background:#755975;}
+.form_box{display:flex;flex-direction:row;background:white;width:75vw;height:80vh;border-radius:20px;align-items:center;position:relative;}
+form{width:100%;height:100%;display:flex;align-items:center;}
+.inputs{align-items:center;display:flex;width:25vw;flex-direction:column;position:absolute;left:50%;}
+.backimg{display:flex;flex-direction:column;background-image:url("assets/colunacadastro.png");background-size:100% 100%;background-position:center;width:30%;height:100%;align-items:flex-end;position:absolute;border-radius:20px;}
+#cadastro{display:flex;background-color:white;position:absolute;top:30%;right:5%;height:6vh;width:12vw;align-items:center;justify-content:center;font-size:2.5vh;border-radius:10px;color:#734F96;}
+#usericon{margin-bottom:3vh;user-select:none;pointer-events:none;}
+#pomba{display:flex;position:absolute;bottom:80%;left:99%;user-select:none;pointer-events:none;}
+
+
+===== stylecadastro_professor.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body{background-color:#5C4B8A;}
+.container{width:100vw;height:100vh;display:flex;margin:auto;align-items:center;justify-content:center;}
+a{text-decoration:none;color:#734F96;font-size:2vh;margin-top:2.5vh;}
+input,select{padding:5px;margin:5px;width:100%;border:2px solid #734F96;margin-bottom:2.5vh;background:transparent;padding-left:1vw;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+button:active{background:#755975;}
+.form_box{display:flex;flex-direction:row;background:white;width:75vw;height:80vh;border-radius:20px;align-items:center;position:relative;}
+form{width:100%;height:100%;display:flex;align-items:center;}
+.inputs{align-items:center;display:flex;width:25vw;flex-direction:column;position:absolute;left:50%;}
+.backimg{display:flex;flex-direction:column;background-image:url("assets/colunacadastro.png");background-size:100% 100%;background-position:center;width:30%;height:100%;align-items:flex-end;position:absolute;border-radius:20px;}
+#cadastro{display:flex;background-color:white;position:absolute;top:30%;right:5%;height:6vh;width:12vw;align-items:center;justify-content:center;font-size:2.5vh;border-radius:10px;color:#734F96;}
+.btnladoalado{display:flex;width:100%;flex-direction:row;margin-top:2.5vh;margin-bottom:2.5vh;}
+#escola{margin:auto;width:25vw;}
+#usericon{margin-bottom:3vh;user-select:none;pointer-events:none;}
+#pomba{display:flex;position:absolute;bottom:80%;left:99%;user-select:none;pointer-events:none;}
+
+
+===== stylecriar_turma.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+.container{display:flex;justify-content:center;align-items:center;}
+body{display:flex;background-color:#E6E6FA;position:relative;align-items:center;justify-content:center;height:100vh;}
+form{position:relative;border-radius:40px;align-items:left;display:flex;background-color:#9474c7;flex-direction:column;width:50vw;height:70vh;box-shadow:-20px -40px 0 #6a5291;}
+#seta{position:absolute;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+#isha{position:absolute;width:12vw;bottom:1%;right:3%;}
+h2{align-self:center;color:white;font-size:4vh;margin-top:3vh;margin-bottom:5vh;}
+input{margin-left:2vw;width:60%;height:10vh;margin-bottom:2vh;padding:1vw;border:none;background-color:white;font-size:3vh;}
+#criar{position:absolute;margin-left:2vw;padding:0;width:17%;display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;bottom:10vh;}
+
+
+===== styledesignar_professor.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+.container{display:flex;justify-content:center;align-items:center;}
+body{display:flex;background-color:#E6E6FA;position:relative;align-items:center;justify-content:center;height:100vh;}
+form{position:relative;border-radius:40px;align-items:left;display:flex;background-color:#9474c7;flex-direction:column;width:50vw;height:70vh;box-shadow:-20px -40px 0 #6a5291;}
+#seta{position:absolute;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+#isha{position:absolute;width:12vw;bottom:1%;right:3%;}
+h2{align-self:center;color:white;font-size:4vh;margin-top:3vh;margin-bottom:5vh;}
+input,select{margin-left:2vw;margin-bottom:2vh;width:60%;height:10vh;margin-bottom:2vh;padding:1vw;border:none;background-color:white;font-size:3vh;}
+#criar{position:absolute;margin-left:2vw;padding:0;width:17%;display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;bottom:10vh;}
+
+
+===== styleenviar_tarefa.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+.container{display:flex;justify-content:center;align-items:center;}
+body{display:flex;background-color:#E6E6FA;position:relative;align-items:center;justify-content:center;height:100vh;}
+form{position:relative;border-radius:40px;align-items:left;display:flex;background-color:#9474c7;flex-direction:column;width:60vw;height:70vh;box-shadow:-20px -40px 0 #6a5291;}
+h2{align-self:center;color:white;font-size:4vh;margin-top:3vh;margin-bottom:5vh;}
+input,button,select,textarea{margin-left:2vw;width:60%;height:5vh;margin-bottom:2vh;padding:1vw;border:none;background-color:white;}
+#descricao{height:25%;resize:none;}
+#turma{width:15%;height:10%;margin-bottom:10%;}
+#enviar{padding:0;width:17%;display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+#arquivo{display:flex;align-items:center;justify-content:center;padding:0.5vw;}
+#seta{position:absolute;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+#isha{position:absolute;width:8vw;bottom:1%;right:3%;}
+
+
+===== styleescolhacadastro.css =====
+*{margin:0;padding:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+.container{display:flex;height:100vh;width:100vw;position:relative;align-items:center;}
+body{background:#E6E6FA;}
+.caixaitens{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#8d74ad;width:40%;height:55%;border-radius:40px;position:absolute;left:45%;}
+a:active{background:#755975;}
+.btnladolado{display:flex;flex-direction:row;gap:5vw;}
+#escola{margin-top:4vh;}
+h1{margin-bottom:5vh;color:#E6E6FA;font-size:6vh;}
+#logo{height:auto;width:7vw;position:fixed;right:2vw;bottom:2vh;user-select:none;pointer-events:none;}
+#fundo{border-radius:0;position:fixed;bottom:0;left:0;width:auto;height:100vh;user-select:none;pointer-events:none;}
+a{text-decoration:none;display:flex;height:8vh;align-items:center;justify-content:center;width:10vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+
+
+===== stylemenu_aluno.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+#botoes_saida{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:2vw;}
+#confirm_saida{display:none;position:absolute;top:0;left:0;z-index:10000000;width:100%;height:100%;background-color:rgba(0,0,0,0.5);align-items:center;justify-content:center;border-radius:0;}
+.container{display:flex;flex-direction:row;}
+body{background:#E6E6FA;position:relative;}
+#ola{color:#5C4B8A;}
+.confirmacao{margin-top:3vh;gap:2vh;}
+.icon{width:2vw;justify-self:center;align-self:center;border-radius:0;}
+#sidebar{border-radius:0;display:flex;flex-direction:column;background:#9474c7;width:5vw;min-height:100vh;height:auto;align-items:center;content-visibility:hidden;}
+#btnmenu{position:absolute;z-index:1;left:1vw;top:3vh;cursor:pointer;width:3vw;justify-self:center;align-self:center;border-radius:0;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+#classconnect{color:#4e327a;margin-bottom:5vh;margin-top:10vh;}
+#logo_inicio{position:fixed;inset:0;margin:auto;width:10vw;opacity:0.5;z-index:-1;}
+a{text-decoration:none;}
+h3,#btnsair,a{gap:1.5vw;display:flex;color:white;font-weight:bold;font-family:Arial;background:none;border:none;font-size:1.6vw;margin:3vh;margin-bottom:0.5vh;align-items:center;justify-content:center;cursor:pointer;}
+#btnsair{cursor:pointer;margin-top:55vh;}
+h1{position:absolute;right:1%;top:1%;font-size:5vh;}
+#btnmenu{pointer-events:all;}
+img{pointer-events:none;user-select:none;}
+.btnprincipais{border:none;display:flex;height:15vh;align-items:center;justify-content:left;width:20vw;font-size:3vh;background:#9474c7;font-weight:bold;color:white;cursor:pointer;padding-left:0.5vw;margin-top:20vh;margin-left:3vw;box-shadow:-8px -8px 0px #6a5291;}
+#ajudapopup{display:none;position:absolute;line-break:auto;width:30vw;background-color:#b29ad8;padding:2vw;top:24%;left:22%;}
+#oquesomostexto{text-align:justify;color:black;font-size:1.2vw;}
+#oquesomos{margin-bottom:2vh;cursor:auto;}
+#minha_contapopup{display:none;position:absolute;line-break:auto;width:15vw;background-color:#b29ad8;padding:2vw;top:30%;left:22%;}
+#usuario{color:white;margin-bottom:1vh;}
+#email_usuario{margin:none;}
+
+
+===== stylemenu_escola.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+#confirm_saida{display:none;position:absolute;top:0;left:0;z-index:10000000;width:100%;height:100%;background-color:rgba(0,0,0,0.5);align-items:center;justify-content:center;border-radius:0;}
+#classconnect{color:#4e327a;margin-bottom:1vh;margin-top:2vh;}
+#btnmenu{position:absolute;z-index:1;left:1vw;top:3vh;cursor:pointer;width:3vw;justify-self:center;align-self:center;border-radius:0;}
+.icon{width:2vw;justify-self:center;align-self:center;border-radius:0;}
+#btnsair{cursor:pointer;margin-top:5vh;}
+h3,#btnsair,a{gap:1vw;display:flex;color:white;font-weight:bold;font-family:Arial;background:none;border:none;font-size:1.6vw;margin:3vh;margin-bottom:0.5vh;align-items:center;justify-content:center;cursor:pointer;}
+#sidebar{position:absolute;left:0;top:0;border-radius:0;border-bottom-right-radius:20px;display:flex;flex-direction:column;background:#9474c7;width:25vw;min-height:10vh;align-items:center;content-visibility:hidden;}
+#botoes_saida{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:2vw;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+.container{display:flex;flex-direction:row-reverse;min-height:100vh;min-width:100vw;width:auto;height:auto;position:relative;}
+body{background:#E6E6FA;position:relative;}
+#ola{color:#5C4B8A;margin-top:1vh;margin-right:1vw;}
+#maincard{position:absolute;inset:0;border:none;display:flex;height:50vh;align-self:center;justify-self:center;align-items:center;justify-content:center;justify-items:left;width:40vw;font-size:3vh;background:#9474c7;font-weight:bold;color:white;box-shadow:-12px -12px 0px #6a5291;flex-direction:column;}
+a{text-decoration:none;background-color:#E6E6FA;color:black;font-weight:normal;height:20%;width:50%;padding:1vw;font-size:3.1vh;text-align:center;}
+#pilar_esquerda{position:fixed;width:20vw;bottom:-20vh;left:-5vw;border-radius:0;}
+#pilares_direita{position:fixed;bottom:0;right:-10vw;width:30vw;border-radius:0;}
+#isha{position:absolute;width:8vw;bottom:-2vh;left:-3vw;}
+#ajudapopup{display:none;position:absolute;line-break:auto;width:30vw;background-color:#b29ad8;padding:2vw;top:15%;left:22%;}
+#oquesomostexto{text-align:justify;color:black;font-size:1.2vw;}
+#oquesomos{margin-bottom:2vh;cursor:auto;}
+#minha_contapopup{display:none;position:absolute;line-break:auto;width:15vw;background-color:#b29ad8;padding:2vw;top:20%;left:22%;}
+#usuario{color:white;margin-bottom:1vh;}
+#email_usuario{margin:none;}
+
+
+===== stylemenu_professor.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+#botoes_saida{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:2vw;}
+#confirm_saida{display:none;position:absolute;top:0;left:0;z-index:10000000;width:100%;height:100%;background-color:rgba(0,0,0,0.5);align-items:center;justify-content:center;border-radius:0;}
+.container{display:flex;flex-direction:row-reverse;}
+body{background:#E6E6FA;position:relative;}
+#ola{color:#5C4B8A;position:absolute;left:1vw;}
+.confirmacao{margin-top:3vh;gap:2vh;}
+.icon{width:2vw;justify-self:center;align-self:center;border-radius:0;}
+#sidebar{border-radius:0;display:flex;flex-direction:column;background:#9474c7;width:5vw;min-height:100vh;height:auto;align-items:center;content-visibility:hidden;}
+#btnmenu{position:absolute;z-index:1;right:1vw;top:3vh;cursor:pointer;width:3vw;justify-self:center;align-self:center;border-radius:0;}
+button{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+#classconnect{color:#4e327a;margin-bottom:5vh;margin-top:10vh;}
+#bolinhas{position:fixed;margin:auto;width:10vw;z-index:-1;border-radius:0;left:0;bottom:0;}
+a{text-decoration:none;}
+h3,#btnsair,a{gap:1.5vw;display:flex;color:white;font-weight:bold;font-family:Arial;background:none;border:none;font-size:1.6vw;margin:3vh;margin-bottom:0.5vh;align-items:center;justify-content:center;cursor:pointer;}
+#btnsair{cursor:pointer;margin-top:55vh;}
+h1{position:absolute;right:1%;top:1%;font-size:5vh;}
+#btnmenu{pointer-events:all;}
+img{pointer-events:none;user-select:none;}
+.btnesquerda{display:flex;height:20vh;align-items:center;justify-content:left;width:25vw;font-size:3vh;background:#9474c7;font-weight:bold;color:white;cursor:pointer;padding-left:0.5vw;margin-right:5vw;margin-top:20vh;box-shadow:-8px -8px 0px #6a5291;}
+.btndireita{display:flex;height:15vh;align-items:center;justify-content:left;width:20vw;font-size:3vh;background:#9474c7;font-weight:bold;color:white;cursor:pointer;padding-left:0.5vw;margin-right:2vw;margin-top:20vh;box-shadow:-8px -8px 0px #6a5291;}
+#cardsprincipais{display:flex;}
+#cardsesquerda{display:flex;flex-direction:column;}
+#cardsdireita{display:flex;flex-direction:column;margin-right:10vw;}
+#tarefasenviadas{margin-top:3vh;}
+#isha{display:flex;height:max-content;width:7vw;position:relative;bottom:-78vh;margin-right:2vw;}
+#envtarefa{height:35vh;justify-content:center;font-size:7vh;}
+#ajudapopup{display:none;position:absolute;line-break:auto;width:30vw;background-color:#b29ad8;padding:2vw;top:24%;right:22%;}
+#oquesomostexto{text-align:justify;color:black;font-size:1.2vw;}
+#oquesomos{margin-bottom:2vh;cursor:auto;}
+#minha_contapopup{display:none;position:absolute;line-break:auto;width:15vw;background-color:#b29ad8;padding:2vw;top:30%;right:22%;}
+#usuario{color:white;margin-bottom:1vh;}
+#email_usuario{margin:none;}
+
+
+===== styletarefas_aluno.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+#seta{position:absolute;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+body{width:100vw;height:100vh;background-color:#E6E6FA;}
+.container{display:flex;width:100vw;height:100vh;align-items:center;flex-direction:column;}
+#top_card{display:flex;background-color:#9474c7;width:60%;border-radius:0 0 30px 30px;height:25%;justify-content:center;align-items:center;}
+h1{font-size:5vw;color:white;}
+#botoes{display:flex;gap:10vw;}
+.botoes{text-decoration:none;border:none;display:flex;height:15vh;align-items:center;justify-content:left;width:20vw;font-size:3vh;background:#9474c7;font-weight:bold;color:white;cursor:pointer;padding-left:0.5vw;margin-top:30vh;margin-left:3vw;box-shadow:-8px -8px 0px #6a5291;}
+
+
+===== styletarefas_concluidas.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+#seta{position:fixed;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+body,.container{min-height:100vh;height:auto;width:auto;display:flex;background-color:#E6E6FA;align-items:center;justify-content:center;}
+.container{width:auto;height:auto;}
+h1{color:white;margin-top:1vh;}
+#lista{width:100%;height:auto;justify-content:center;display:grid;grid-template-columns:repeat(3,1fr);}
+#tarefas{display:flex;align-items:center;position:relative;border-radius:40px;display:flex;background-color:#9474c7;flex-direction:column;width:60vw;min-height:70vh;height:auto;box-shadow:-20px -40px 0 #6a5291;padding:2vw;margin-top:10vh;margin-bottom:10vh;}
+.tarefa{background-color:lime;width:15vw;min-height:10vh;justify-self:center;margin-top:3vh;padding:1vw;overflow-wrap:anywhere;}
+#isha{position:relative;width:8vw;right:-25vw;bottom:-3vh;}
+
+
+===== styletarefas_enviadas.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body,.container{min-height:100vh;height:auto;width:auto;display:flex;background-color:#E6E6FA;align-items:center;justify-content:center;}
+.container{width:auto;height:auto;}
+h1{color:white;margin-top:1vh;}
+#lista{width:100%;height:auto;justify-content:center;display:grid;grid-template-columns:repeat(3,1fr);}
+#tarefas{display:flex;align-items:center;position:relative;border-radius:40px;display:flex;background-color:#9474c7;flex-direction:column;width:60vw;min-height:70vh;height:auto;box-shadow:-20px -40px 0 #6a5291;padding:2vw;margin-top:10vh;margin-bottom:10vh;}
+.tarefa{background-color:white;width:15vw;min-height:10vh;justify-self:center;margin-top:3vh;padding:1vw;overflow-wrap:anywhere;}
+.btn-concluir{display:block;margin-top:2vh;padding:1vh 1vw;cursor:pointer;border:none;background-color:#9474c7;color:white;font-weight:bold;}
+#isha{position:relative;width:8vw;right:-25vw;bottom:-3vh;}
+#confirm_concluir{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;justify-content:center;align-items:center;background-color:rgba(0,0,0,0.5);z-index:100000;}
+#seta{position:fixed;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+#concluir_cont{padding:3vw;display:flex;flex-direction:column;align-items:center;}
+#botoes_concluir{display:flex;gap:2vw;margin-top:3vh;}
+h3{color:white;}
+.confirmacao{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+
+
+===== styletarefas_pendentes.css =====
+*{padding:0;margin:0;box-sizing:border-box;border-radius:10px;font-family:Arial;}
+body,.container{min-height:100vh;height:auto;width:auto;display:flex;background-color:#E6E6FA;align-items:center;justify-content:center;}
+.container{width:auto;height:auto;}
+h1{color:white;margin-top:1vh;}
+#lista{width:100%;height:auto;justify-content:center;display:grid;grid-template-columns:repeat(3,1fr);}
+#tarefas{display:flex;align-items:center;position:relative;border-radius:40px;display:flex;background-color:#9474c7;flex-direction:column;width:60vw;min-height:70vh;height:auto;box-shadow:-20px -40px 0 #6a5291;padding:2vw;margin-top:10vh;margin-bottom:10vh;}
+.tarefa{background-color:white;width:15vw;min-height:10vh;justify-self:center;margin-top:3vh;padding:1vw;overflow-wrap:anywhere;}
+.btn-concluir{display:block;margin-top:2vh;padding:1vh 1vw;cursor:pointer;border:none;background-color:#9474c7;color:white;font-weight:bold;}
+#isha{position:relative;width:8vw;right:-25vw;bottom:-3vh;}
+#confirm_concluir{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;justify-content:center;align-items:center;background-color:rgba(0,0,0,0.5);z-index:100000;}
+#seta{position:fixed;width:3vw;height:auto;left:1vw;top:1vh;cursor:pointer;}
+#concluir_cont{padding:3vw;display:flex;flex-direction:column;align-items:center;}
+#botoes_concluir{display:flex;gap:2vw;margin-top:3vh;}
+h3{color:white;}
+.confirmacao{display:flex;height:4.5vh;align-items:center;justify-content:center;width:7vw;font-size:2vh;background:#E6D7FF;border:2px solid #734F96;font-weight:bold;color:#734F96;cursor:pointer;}
+
+
+===== tarefas_aluno.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarefas</title>
+<link rel="stylesheet" href="styletarefas_aluno.css">
+</head>
+<body>
+<div class="container">
+<a id="voltar" href="menu_aluno.html"><img id="seta" src="assets/icon_seta.png"></a>
+<div id="top_card">
+<h1 id="titulo">Tarefas</h1>
+</div>
+<div id="botoes">
+<a class="botoes" href="tarefas_pendentes.html">Tarefas<br>Pendentes</a>
+<a class="botoes" href="tarefas_concluidas.html">Tarefas<br>Entregues</a>
+</div>
+</div>
+</body>
+</html>
+
+===== tarefas_concluidas.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarefas ConcluÃ­das</title>
+<link rel="stylesheet" href="styletarefas_concluidas.css">
+</head>
+<body>
+<div class="container">
+<a id="voltar" href="tarefas_aluno.html"><img id="seta" src="assets/icon_seta.png"></a>
+<div id="tarefas">
+<h1 id="titulo">Tarefas ConcluÃ­das</h1>
+<div id="lista">
+</div>
+<img id="isha" src="assets/isha_com_lupa_kk.png">
+</div>
+</div>
+<script src="scripttarefas_concluidas.js"></script>
+</body>
+</html>
+
+===== tarefas_enviadas.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarefas Enviadas</title>
+<link rel="stylesheet" href="styletarefas_enviadas.css">
+</head>
+<body>
+<div class="container">
+<a id="voltar" href="menu_professor.html"><img id="seta" src="assets/icon_seta.png"></a>
+<div id="tarefas">
+<h1 id="titulo">Tarefas Enviadas</h1>
+<div id="lista">
+</div>
+<img id="isha" src="assets/isha_com_lupa_kk.png">
+</div>
+</div>
+<script src="scripttarefas_enviadas.js"></script>
+</body>
+</html>
+
+===== tarefas_pendentes.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarefas Pendentes</title>
+<link rel="stylesheet" href="styletarefas_pendentes.css">
+</head>
+<body>
+<div class="container">
+<a id="voltar" href="tarefas_aluno.html"><img id="seta" src="assets/icon_seta.png"></a>
+<div id="tarefas">
+<h1 id="titulo">Tarefas Pendentes</h1>
+<div id="lista">
+</div>
+<img id="isha" src="assets/isha_com_lupa_kk.png">
+</div>
+<div id="confirm_concluir">
+<div id="concluir_cont">
+<h3>Deseja concluir esta tarefa?</h3>
+<div id="botoes_concluir">
+<button class="confirmacao" onclick="concluirTarefa()">Sim</button>
+<button class="confirmacao" onclick="fecharPopupConcluir()">NÃ£o</button>
+</div>
+</div>
+</div>
+</div>
+<script src="scripttarefas_pendentes.js"></script>
+</body>
+</html>
+
+===== tela_turma_aluno.html =====
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<p id = 'lista'></p>
+<script src="scripttela_turma_aluno.js"></script>
+</body>
+</html>
+

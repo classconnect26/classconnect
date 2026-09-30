@@ -6,7 +6,7 @@ if(alunoId === 0){
 
 async function exibirTarefas(){
     try{
-        const resposta = await fetch('http://localhost:3000/api/tarefas-concluidas',{
+        const resposta = await fetch('/api/tarefas-concluidas',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({alunoId})
@@ -33,7 +33,7 @@ async function exibirTarefas(){
             if(tarefa.nome_arquivo){
                 const arquivo = document.createElement('a');
                 const caminho = tarefa.caminho_arquivo.replaceAll('\\', '/');
-                arquivo.href = `http://localhost:3000/${caminho}`;
+                arquivo.href = `/${caminho}`;
                 arquivo.textContent = `Download: ${tarefa.nome_arquivo}`;
                 arquivo.download = tarefa.nome_arquivo;
                 div.appendChild(arquivo);

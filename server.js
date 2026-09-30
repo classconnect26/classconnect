@@ -13,16 +13,12 @@ app.use('/uploads', express.static('uploads'))
 app.use(express.static(__dirname));
 
 const pool = new Pool({
-    user: 'postgres', 
-    host: 'localhost',
-    database: 'classconnect', 
-    password: '1909', 
-    port: 5432,
+    connectionString: process.env.DATABASE_URL
 });
 
 
 app.listen(3000, () => {
-    console.log("Servidor backend rodando em http://localhost:3000");
+    console.log("Servidor backend rodando em ");
 });
 
 app.post('/cadastrar-escola', async (req, res) => {
@@ -108,7 +104,7 @@ app.post('/cadastrar-professor', async (req, res) => {
     try{
         const {turma, escolaId} = req.body;
 
-        const checarturma = await pool.query('SELECT * FROM turma WHERE nome = $1', [turma]);
+        const checarturma = await pool.query('SELECT * FROM turma WHERE nome = $1 AND fk_escola_id_escola = $2', [turma, escolaId]);
 
         if(checarturma.rows.length > 0){
             return res.status(400).json({erro: 'Turma já criada no sistema, tente outro nome.'})
@@ -128,10 +124,10 @@ app.post('/cadastrar-professor', async (req, res) => {
     try {
         const { nome, senha } = req.body;
 
-        const resultado = await pool.query('SELECT * FROM aluno WHERE email = $1 OR nome = $1', [nome]);
+        const resultado = await pool.query('SELECT * FROM aluno WHERE email = $1', [nome]);
 
         if (resultado.rows.length === 0) {
-            return res.status(404).json({ erro: "Aluno ou email não encontrado." });
+            return res.status(404).json({ erro: "Email não encontrado." });
         }
 
         const aluno = resultado.rows[0];
@@ -151,10 +147,10 @@ app.post('/login-escola', async (req, res) => {
     try {
         const { nome, senha } = req.body;
 
-        const resultado = await pool.query('SELECT * FROM escola WHERE cnpj = $1 OR nome = $1', [nome]);
+        const resultado = await pool.query('SELECT * FROM escola WHERE cnpj = $1', [nome]);
 
         if (resultado.rows.length === 0) {
-            return res.status(404).json({ erro: "Escola ou CNPJ não encontrado." });
+            return res.status(404).json({ erro: "CNPJ não encontrado." });
         }
 
         const escola = resultado.rows[0];
@@ -175,10 +171,10 @@ app.post('/login-professor', async (req, res) => {
     try {
         const { nome, senha } = req.body;
 
-        const resultado = await pool.query('SELECT * FROM professor WHERE email = $1 OR nome = $1', [nome]);
+        const resultado = await pool.query('SELECT * FROM professor WHERE email = $1', [nome]);
 
         if (resultado.rows.length === 0) {
-            return res.status(404).json({ erro: "Professor ou email não encontrado." });
+            return res.status(404).json({ erro: "Email não encontrado." });
         }
 
         const professor = resultado.rows[0];

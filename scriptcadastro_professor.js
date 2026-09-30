@@ -2,7 +2,7 @@ const selectEscola = document.getElementById("escola");
 
 async function carregarEscolas() {
     try {
-        const resposta = await fetch('http://localhost:3000/api/escola-cadastro');
+        const resposta = await fetch('/api/escola-cadastro');
         const escolas = await resposta.json();
 
         escolas.forEach(escola => {
@@ -51,7 +51,7 @@ document.querySelector('form').addEventListener('submit', async (evento) => {
     const dados = { nome, email, senha, id_escola };
 
     try {
-        const resposta = await fetch('http://localhost:3000/cadastrar-professor', {
+        const resposta = await fetch('/cadastrar-professor', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(dados)

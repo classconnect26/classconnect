@@ -8,7 +8,7 @@ async function exibirTarefas(){
 
     try{
 
-        const resposta = await fetch('http://localhost:3000/api/tarefas-aluno',{
+        const resposta = await fetch('/api/tarefas-aluno',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({alunoId})
@@ -39,7 +39,7 @@ async function exibirTarefas(){
             if(tarefa.nome_arquivo){
                 const arquivo = document.createElement('a');
                 const caminho = tarefa.caminho_arquivo.replaceAll('\\', '/');
-                arquivo.href = `http://localhost:3000/${caminho}`;
+                arquivo.href = `/${caminho}`;
                 arquivo.textContent = `Download: ${tarefa.nome_arquivo}`;
                 arquivo.download = tarefa.nome_arquivo;
                 div.appendChild(arquivo);
@@ -74,7 +74,7 @@ function fecharPopupConcluir(){
 
 async function concluirTarefa(){
     try{
-        const resposta = await fetch('http://localhost:3000/concluir-tarefa',{
+        const resposta = await fetch('/concluir-tarefa',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({alunoId: alunoId, tarefaId: tarefaSelecionada})

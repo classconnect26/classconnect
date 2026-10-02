@@ -291,7 +291,7 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
         if(arquivo){
             nomearquivo = arquivo.originalname;
 
-            const nomeunico = `${Date.now()}-${arquivo.originalname}`;
+            const nomeunico = `${Date.now()}-${arquivo.originalname.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9.-]/g, '_')}`;
 
             const {data, error} = await supabase.storage
                 .from('tarefas')

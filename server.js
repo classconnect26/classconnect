@@ -2,20 +2,20 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const multer = require('multer');
+const upload = multer({storage: multer.memoryStorage()});
+const { createClient } = require('@supabase/supabase-js');
 
-const upload = multer({dest: 'uploads/'})
 const app = express();
-
-app.use(cors()); 
-app.use(express.json());
-app.use('/uploads', express.static('uploads'))
-
-app.use(express.static(__dirname));
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static(__dirname));
 
 app.listen(3000, () => {
     console.log("Servidor backend rodando em ");
@@ -229,8 +229,56 @@ app.post('/designar-professor', async (req, res) => {
     }
 
 })
-app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
 
+app.post('/trocar-senha-aluno', async (req, res) => {
+    try{
+        const { alunoId, senhaAtual, novaSenha } = req.body;
+
+        const resultado = await pool.query('UPDATE aluno SET senha = $1 WHERE id_aluno = $2 AND senha = $3 RETURNING nome', [novaSenha, alunoId, senhaAtual]);
+
+        if (resultado.rows.length === 0) {
+            return res.status(400).json({ erro: "Senha atual incorreta." });
+        }
+        res.status(200).json({ mensagem: "Senha alterada com sucesso!", nome: resultado.rows[0].nome });
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ erro: "Erro interno do servidor." });
+    }
+})
+
+app.post('/trocar-senha-escola', async (req, res) => {
+    try{
+        const { escolaId, senhaAtual, novaSenha } = req.body;
+
+        const resultado = await pool.query('UPDATE escola SET senha = $1 WHERE id_escola = $2 AND senha = $3 RETURNING nome', [novaSenha, escolaId, senhaAtual]);
+
+        if (resultado.rows.length === 0) {
+            return res.status(400).json({ erro: "Senha atual incorreta." });
+        }
+        res.status(200).json({ mensagem: "Senha alterada com sucesso!", nome: resultado.rows[0].nome });
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ erro: "Erro interno do servidor." });
+    }
+})
+
+app.post('/trocar-senha-professor', async (req, res) => {
+    try{
+        const { professorId, senhaAtual, novaSenha } = req.body;
+
+        const resultado = await pool.query('UPDATE professor SET senha = $1 WHERE id_professor = $2 AND senha = $3 RETURNING nome', [novaSenha, professorId, senhaAtual]);
+
+        if (resultado.rows.length === 0) {
+            return res.status(400).json({ erro: "Senha atual incorreta." });
+        }
+        res.status(200).json({ mensagem: "Senha alterada com sucesso!", nome: resultado.rows[0].nome });
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ erro: "Erro interno do servidor." });
+    }
+})
+
+app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
     try{
         const {titulo, descricao, turmaId, professorId} = req.body;
         const arquivo = req.file;
@@ -240,9 +288,27 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
         let nomearquivo = null;
         let caminhoarquivo = null;
 
-        if (arquivo){
+        if(arquivo){
             nomearquivo = arquivo.originalname;
-            caminhoarquivo = arquivo.path;
+
+            const nomeunico = `${Date.now()}-${arquivo.originalname}`;
+
+            const {data, error} = await supabase.storage
+                .from('tarefas')
+                .upload(nomeunico, arquivo.buffer, {
+                    contentType: arquivo.mimetype
+                });
+
+            if(error){
+                console.error(error);
+                return res.status(500).json({erro: 'Erro ao enviar arquivo para o Supabase.'});
+            }
+
+            const {data: urlarquivo} = supabase.storage
+                .from('tarefas')
+                .getPublicUrl(nomeunico);
+
+            caminhoarquivo = urlarquivo.publicUrl;
         }
 
         const resultado = await pool.query('INSERT INTO tarefa (titulo, fk_professor_id_professor, descricao, nome_arquivo, caminho_arquivo, disciplina) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id_tarefa', [titulo, professorId, descricao, nomearquivo, caminhoarquivo, disciplina.rows[0].disciplina]);
@@ -254,7 +320,6 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
         console.error(error);
         res.status(500).json({erro: 'Erro ao enviar.'})
     }
-
 })
 
 app.post('/concluir-tarefa', async (req, res) => {

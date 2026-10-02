@@ -34,6 +34,9 @@ function fecharPopup() {
     document.getElementById('confirm_saida').style.display = 'none';
 }
 
+let ajudacontrole = 0;
+let minhacontacontrole = 0
+
 function sidebar(){
     if(document.getElementById('sidebar').style.width !== '20vw'){
         document.getElementById('sidebar').style.width = '20vw';
@@ -42,6 +45,10 @@ function sidebar(){
     else{
         document.getElementById('sidebar').style.contentVisibility = 'hidden';
         document.getElementById('sidebar').style.width = '5vw';
+        document.getElementById('ajudapopup').style.display = 'none';
+        document.getElementById('minha_contapopup').style.display = 'none';
+        ajudacontrole = 0;
+        minhacontacontrole = 0;
     }
 }
 
@@ -97,20 +104,17 @@ async function exibirTurmas() {
     }
 }
 
-let ajudacontrole = 0;
-let minhacontacontrole = 0
-
 function expandir_ajuda(){
     
-    document.getElementById('minha_contapopup').style.display = 'none'
+    document.getElementById('minha_contapopup').style.display = 'none';
     minhacontacontrole = 0;
 
     if(ajudacontrole === 1){
-        document.getElementById('ajudapopup').style.display = 'none'
+        document.getElementById('ajudapopup').style.display = 'none';
         ajudacontrole = 0;
     }
     else{
-        document.getElementById('ajudapopup').style.display = 'block'
+        document.getElementById('ajudapopup').style.display = 'flex';
         ajudacontrole = 1;
     }
 }
@@ -122,7 +126,7 @@ async function exibir_minhaconta(){
     if(minhacontacontrole === 0){
 
         minhacontacontrole = 1;
-        document.getElementById('minha_contapopup').style.display = 'block'
+        document.getElementById('minha_contapopup').style.display = 'flex';
 
         try{
             const resposta = await fetch('/api/professor', {

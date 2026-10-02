@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Senha</title>
+    <link rel="stylesheet" href="styletrocar_senha_aluno.css">
+</head>
+<body>
+    <div class="container">
+
+        <a id="retornar" href="menu_aluno.html"><img id = "seta" src="assets/icon_seta.png" onclick="retornar()"></a>
+
+        <form id="form">
+            <img id="isha" src="assets/isha_trocar_senha.png">
+
+            <h2 id="titulo">Trocar Senha</h2>
+            <input id="senha_atual" type="password" placeholder="Senha atual" required>
+            <input id="nova_senha" type="password" placeholder="Nova senha" required>
+            <input id="confirmar_senha" type="password" placeholder="Confirmar nova senha" required>
+
+            <button type="submit" id="salvar">Salvar senha</button>
+        </form>
+
+    </div>
+
+    <script src="scripttrocar_senha_aluno.js"></script>
+</body>
+</html>

@@ -34,6 +34,9 @@ function fecharPopup() {
     document.getElementById('confirm_saida').style.display = 'none';
 }
 
+let ajudacontrole = 0;
+let minhacontacontrole = 0
+
 function sidebar(){
     if(document.getElementById('sidebar').style.minHeight !== '30vh'){
         document.getElementById('sidebar').style.minHeight = '30vh';
@@ -42,11 +45,12 @@ function sidebar(){
     else{
         document.getElementById('sidebar').style.contentVisibility = 'hidden';
         document.getElementById('sidebar').style.minHeight = '10vh';
+        document.getElementById('ajudapopup').style.display = 'none';
+        document.getElementById('minha_contapopup').style.display = 'none';
+        ajudacontrole = 0;
+        minhacontacontrole = 0;
     }
 }
-
-let ajudacontrole = 0;
-let minhacontacontrole = 0
 
 function expandir_ajuda(){
     
@@ -58,7 +62,7 @@ function expandir_ajuda(){
         ajudacontrole = 0;
     }
     else{
-        document.getElementById('ajudapopup').style.display = 'block'
+        document.getElementById('ajudapopup').style.display = 'flex'
         ajudacontrole = 1;
     }
 }
@@ -70,7 +74,7 @@ async function exibir_minhaconta(){
     if(minhacontacontrole === 0){
 
         minhacontacontrole = 1;
-        document.getElementById('minha_contapopup').style.display = 'block'
+        document.getElementById('minha_contapopup').style.display = 'flex';
 
         try{
             const resposta = await fetch('/api/escola', {

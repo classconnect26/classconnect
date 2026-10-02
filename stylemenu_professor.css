@@ -228,6 +228,7 @@ img{
     padding: 2vw;
     top: 24%;
     right: 22%;
+    flex-direction: column;
 }
 
 #oquesomostexto{
@@ -245,11 +246,13 @@ img{
     display: none;
     position: absolute;
     line-break: auto;
-    width: 15vw;
+    min-width: 15vw;
+    width: auto;
     background-color: #b29ad8;
     padding: 2vw;
     top: 30%;
     right: 22%;
+    flex-direction: column;
 }
 
 #usuario{
@@ -259,4 +262,14 @@ img{
 
 #email_usuario{
     margin: none;
+}
+#trocar_senha{
+    all: revert;
+    cursor: pointer;
+    font-size: 2vh;
+    align-self: center;
+    justify-self: center;
+    color: #4e327a;
+    margin-top: 3vh;
+    text-decoration: none;
 }

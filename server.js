@@ -2,20 +2,20 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const multer = require('multer');
-const upload = multer({storage: multer.memoryStorage()});
-const { createClient } = require('@supabase/supabase-js');
 
+const upload = multer({dest: 'uploads/'})
 const app = express();
+
+app.use(cors()); 
+app.use(express.json());
+app.use('/uploads', express.static('uploads'))
+
+app.use(express.static(__dirname));
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-
-app.use(cors());
-app.use(express.json());
-app.use(express.static(__dirname));
 
 app.listen(3000, () => {
     console.log("Servidor backend rodando em ");
@@ -279,6 +279,7 @@ app.post('/trocar-senha-professor', async (req, res) => {
 })
 
 app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
+
     try{
         const {titulo, descricao, turmaId, professorId} = req.body;
         const arquivo = req.file;
@@ -288,27 +289,9 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
         let nomearquivo = null;
         let caminhoarquivo = null;
 
-        if(arquivo){
+        if (arquivo){
             nomearquivo = arquivo.originalname;
-
-            const nomeunico = `${Date.now()}-${arquivo.originalname.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9.-]/g, '_')}`;
-
-            const {data, error} = await supabase.storage
-                .from('tarefas')
-                .upload(nomeunico, arquivo.buffer, {
-                    contentType: arquivo.mimetype
-                });
-
-            if(error){
-            console.error('ERRO SUPABASE:', error);
-            return res.status(500).json({erro: error.message});
-        }
-
-            const {data: urlarquivo} = supabase.storage
-                .from('tarefas')
-                .getPublicUrl(nomeunico);
-
-            caminhoarquivo = urlarquivo.publicUrl;
+            caminhoarquivo = arquivo.path;
         }
 
         const resultado = await pool.query('INSERT INTO tarefa (titulo, fk_professor_id_professor, descricao, nome_arquivo, caminho_arquivo, disciplina) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id_tarefa', [titulo, professorId, descricao, nomearquivo, caminhoarquivo, disciplina.rows[0].disciplina]);
@@ -320,6 +303,7 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
         console.error(error);
         res.status(500).json({erro: 'Erro ao enviar.'})
     }
+
 })
 
 app.post('/concluir-tarefa', async (req, res) => {

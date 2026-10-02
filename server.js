@@ -300,9 +300,9 @@ app.post('/enviar-tarefa', upload.single('arquivo'), async (req, res) => {
                 });
 
             if(error){
-                console.error(error);
-                return res.status(500).json({erro: 'Erro ao enviar arquivo para o Supabase.'});
-            }
+            console.error('ERRO SUPABASE:', error);
+            return res.status(500).json({erro: error.message});
+        }
 
             const {data: urlarquivo} = supabase.storage
                 .from('tarefas')
